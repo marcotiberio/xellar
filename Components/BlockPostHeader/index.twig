@@ -1,0 +1,54 @@
+<flynt-component load:on="visible" name="BlockPostHeader">
+  <script type="application/json">{{ jsonData|json_encode }}</script>
+  <div class="w-full max-w-screen-xl mx-auto p-sm sm:p-md md:p-lg flex flex-col gap-sm">
+    <div class="h-auto lg:h-auto w-full grow w-full mx-auto mt-lg md:mt-xl grid grid-cols-1 sm:grid-cols-2 gap-sm sm:gap-md">
+      {# Carousel #}
+      <div data-ref="slider" class="slider swiper-container w-full h-full">
+        <div class="swiper-wrapper w-full h-full">
+          {% for image in carousel %}
+            <div class="slider-item swiper-slide w-full h-full flex items-center justify-center">
+              <figure class="figure w-full h-full relative">
+                <img class="lazyload w-full h-full object-cover relative"
+                  src="{{ image.productImage.src | resize(32) }}"
+                  data-srcset="{{function('wp_get_attachment_image_srcset', image.productImage.id)}}"
+                  data-sizes="auto"
+                  alt="{{ image.productImage.alt|e }}">
+              </figure>
+            </div>
+          {% endfor %}
+        </div>
+        <button type="button" data-ref="prev" class="slider-button slider-button--prev"></button>
+        <button type="button" data-ref="next" class="slider-button slider-button--next"></button>
+      </div>
+      <div class="">
+        {# Table #}
+        <div class="w-full md:w-1/2 lg:w-full flex flex-col md:flex-row lg:flex-col gap-lg items-center">
+          <div class="w-full border border-black p-sm flex flex-col">
+            <div class="py-sm first:pt-0 flex flex-row gap-lg justify-between items-center border-b border-black">
+              <span class="caption w-1/2">{{ labels.tableMaterial }}</span>
+              <span class="body w-1/2 text-right">{{ post.tableMaterial }} kWp</span>
+            </div>
+            <div class="py-sm last:pb-0 flex flex-row gap-lg justify-between items-center border-b border-black last:border-b-0">
+              <span class="caption w-1/2">{{ labels.tableSofteningTemperature }}</span>
+              <span class="body w-1/2 text-right">{{ post.tableSofteningTemperature }}</span>
+            </div>
+            <div class="py-sm last:pb-0 flex flex-row gap-lg justify-between items-center border-b border-black last:border-b-0">
+              <span class="caption w-1/2">{{ labels.tableImpactStrength }}</span>
+              <span class="body w-1/2 text-right">{{ post.tableImpactStrength }}</span>
+            </div>
+            <div class="py-sm last:pb-0 flex flex-row gap-lg justify-between items-center border-b border-black last:border-b-0">
+              <span class="caption w-1/2">{{ labels.tableTensileStrength }}</span>
+              <span class="body w-1/2 text-right">{{ post.tableTensileStrength }}</span>
+            </div>
+            <div class="py-sm last:pb-0 flex flex-row gap-lg justify-between items-center border-b border-black last:border-b-0">
+              <span class="caption w-1/2">{{ labels.tableColors }}</span>
+              <span class="body w-1/2 text-right">{{ post.tableColors }}</span>
+            </div>
+          </div>
+        </div>
+        {# Description #}
+        <div class="py-md">{{ post.description }}</dib>
+      </div>
+    </div>
+  </div>
+</flynt-component>

@@ -1,0 +1,31 @@
+<flynt-component load:on="visible" name="GridImageText">
+  <div class="wrapper max-w-screen-xl mx-auto p-sm sm:p-md md:p-lg">
+    {% if preContentHtml %}
+      <div class="">
+        {{ preContentHtml|e('wp_kses_post') }}
+      </div>
+    {% endif %}
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-md sm:gap-md max-w-screen-lg mx-auto mt-xl">
+      {% for item in items %}
+        {% if item.image or item.contentHtml %}
+          <div class="">
+              {% if item.image %}
+                <figure class="figure mb-sm">
+                  <img class="lazyload w-full object-cover aspect-4/3"
+                    src="{{ item.image.src | resize(32) }}"
+                    data-srcset="{{function('wp_get_attachment_image_srcset', item.image.id)}}"
+                    data-sizes="auto"
+                    alt="{{ item.image.alt|e }}">
+                </figure>
+              {% endif %}
+              {% if item.contentHtml %}
+                <div class="{{ options.card == 'layoutCard' ? 'boxPadding' }}">
+                  {{ item.contentHtml|e('wp_kses_post') }}
+                </div>
+              {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</flynt-component>

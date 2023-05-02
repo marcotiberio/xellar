@@ -1,0 +1,22 @@
+.menu {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--spacingLarge);
+  justify-content: flex-end;
+  list-style: none;
+  padding: var(--spacingSmall) 0;
+
+  &-item {
+    transition: transform 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .current-menu-item {
+    text-decoration: underline;
+  }
+}

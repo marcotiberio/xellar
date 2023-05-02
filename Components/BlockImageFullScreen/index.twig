@@ -1,0 +1,18 @@
+<flynt-component load:on="visible" name="BlockImageFullScreen">
+  <div class="wrapper relative">
+    <figure class="figure">
+      {% if image %}
+        <img class="figure-image lazyload h-[calc(100vh_-_100px)] w-screen object-cover"
+          src="{{ image.src }}"
+          data-srcset="{{function('wp_get_attachment_image_srcset', image.id)}}"
+          data-sizes="auto"
+          alt="{{ image.alt|e }}">
+      {% endif %}
+    </figure>
+    {% if contentTitle %}
+    <div class="absolute w-3/4 md:w-1/2" {{ titlePosition ? 'data-title-position="' ~ titlePosition ~ '"' }}>
+      <div class="superTitle text-white">{{ contentTitle }}</div>
+    </div>
+    {% endif %}
+  </div>
+</flynt-component>

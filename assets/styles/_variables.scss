@@ -1,0 +1,27 @@
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 780px;
+$breakpoint-desktop: 1180px;
+
+$heading-selectors: 'h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6';
+$input-selectors: '[type="tel"], [type="url"], [type="text"], [type="date"], [type="email"], [type="search"], [type="number"], [type="password"], textarea, select';
+
+:root {
+  --bodyFontSize: 16px; // Always use rem. 1rem = 16px
+  --bodyFontSizeSmall: 16px;
+  --flow-space: 1.5625rem;
+
+  --contentMaxWidth: 1000px;
+  --containerMaxWidth: 1440px;
+
+  --spacingSmall: 15px;
+  --spacingLarge: 35px;
+
+  --black: #000;
+  --white: #fff;
+  --grey: #f9f9f9;
+  --yellow: #fed300;
+  --blue: #263978;
+  --acqua: #51bad9;
+  --azulgrey: #e6ecee;
+  
+}

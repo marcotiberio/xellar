@@ -1,0 +1,191 @@
+{
+  "Components/AccordionDefault/script.js": {
+    "file": "assets/script-4ed993c7.js",
+    "isDynamicEntry": true,
+    "src": "Components/AccordionDefault/script.js"
+  },
+  "Components/AccordionSystems/script.js": {
+    "file": "assets/script-6d927ffc.js",
+    "imports": [
+      "_swiper-bundle.min-2c4734cd.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/AccordionSystems/script.js"
+  },
+  "Components/BlockPostArchive/script.js": {
+    "file": "assets/script-bc18cfd5.js",
+    "isDynamicEntry": true,
+    "src": "Components/BlockPostArchive/script.js"
+  },
+  "Components/BlockProductSpecs/script.js": {
+    "file": "assets/script-91556f94.js",
+    "imports": [
+      "_swiper-bundle.min-2c4734cd.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/BlockProductSpecs/script.js"
+  },
+  "Components/BlockVideoOembed/script.js": {
+    "file": "assets/script-979c4bee.js",
+    "imports": [
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/BlockVideoOembed/script.js"
+  },
+  "Components/GridPostsArchive/script.js": {
+    "file": "assets/script-a317b759.js",
+    "imports": [
+      "_index-2a8ce3c2.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/GridPostsArchive/script.js"
+  },
+  "Components/ListComponents/script.js": {
+    "file": "assets/script-6fca4744.js",
+    "imports": [
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/ListComponents/script.js"
+  },
+  "Components/ListingHomepage/script.js": {
+    "file": "assets/script-b235f984.js",
+    "isDynamicEntry": true,
+    "src": "Components/ListingHomepage/script.js"
+  },
+  "Components/NavigationBurger/script.js": {
+    "file": "assets/script-e54e009e.js",
+    "imports": [
+      "_index-2a8ce3c2.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/NavigationBurger/script.js"
+  },
+  "Components/ScrolltriggerComparison/script.js": {
+    "file": "assets/script-e176d15e.js",
+    "imports": [
+      "assets/main.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/ScrolltriggerComparison/script.js"
+  },
+  "Components/SliderFeatProjects/script.js": {
+    "file": "assets/script-e3aa4d4a.js",
+    "imports": [
+      "_swiper-bundle.min-2c4734cd.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/SliderFeatProjects/script.js"
+  },
+  "Components/SliderHorizontal/script.js": {
+    "file": "assets/script-b0b61d87.js",
+    "imports": [
+      "_swiper-bundle.min-2c4734cd.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/SliderHorizontal/script.js"
+  },
+  "Components/SliderLogos/script.js": {
+    "file": "assets/script-0ddd3ddf.js",
+    "imports": [
+      "_swiper-bundle.min-2c4734cd.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/SliderLogos/script.js"
+  },
+  "_helpers-0bb72b7a.js": {
+    "file": "assets/helpers-0bb72b7a.js"
+  },
+  "_index-2a8ce3c2.js": {
+    "file": "assets/index-2a8ce3c2.js"
+  },
+  "_swiper-bundle.min-2c4734cd.js": {
+    "css": [
+      "assets/swiper-bundle-6c3c321b.css"
+    ],
+    "file": "assets/swiper-bundle.min-2c4734cd.js"
+  },
+  "assets/admin.js": {
+    "file": "assets/admin-02f88806.js",
+    "isEntry": true,
+    "src": "assets/admin.js"
+  },
+  "assets/admin.scss": {
+    "file": "assets/admin-252bf907.css",
+    "isEntry": true,
+    "src": "assets/admin.scss"
+  },
+  "assets/fonts/Graphik-Semibold.woff2": {
+    "file": "assets/Graphik-Semibold-4391b4dd.woff2",
+    "src": "assets/fonts/Graphik-Semibold.woff2"
+  },
+  "assets/fonts/MaisonNeue-Bold.woff2": {
+    "file": "assets/MaisonNeue-Bold-32e1e5fe.woff2",
+    "src": "assets/fonts/MaisonNeue-Bold.woff2"
+  },
+  "assets/fonts/MaisonNeue-Book.woff2": {
+    "file": "assets/MaisonNeue-Book-35924f83.woff2",
+    "src": "assets/fonts/MaisonNeue-Book.woff2"
+  },
+  "assets/fonts/TiemposHeadline-Regular.woff2": {
+    "file": "assets/TiemposHeadline-Regular-2d9b70fd.woff2",
+    "src": "assets/fonts/TiemposHeadline-Regular.woff2"
+  },
+  "assets/images/logo.svg": {
+    "file": "assets/logo-26c0c58f.svg",
+    "src": "assets/images/logo.svg"
+  },
+  "assets/main.js": {
+    "dynamicImports": [
+      "node_modules/@webreflection/custom-elements-builtin/esm/index.js",
+      "Components/AccordionDefault/script.js",
+      "Components/AccordionSystems/script.js",
+      "Components/BlockPostArchive/script.js",
+      "Components/BlockProductSpecs/script.js",
+      "Components/BlockVideoOembed/script.js",
+      "Components/GridPostsArchive/script.js",
+      "Components/ListComponents/script.js",
+      "Components/ListingHomepage/script.js",
+      "Components/NavigationBurger/script.js",
+      "Components/ScrolltriggerComparison/script.js",
+      "Components/SliderFeatProjects/script.js",
+      "Components/SliderHorizontal/script.js",
+      "Components/SliderLogos/script.js"
+    ],
+    "file": "assets/main-297f5188.js",
+    "isEntry": true,
+    "src": "assets/main.js"
+  },
+  "assets/main.scss": {
+    "file": "assets/main-23c48f41.css",
+    "isEntry": true,
+    "src": "assets/main.scss"
+  },
+  "assets/print.scss": {
+    "file": "assets/print-4b901a72.css",
+    "isEntry": true,
+    "src": "assets/print.scss"
+  },
+  "assets/tinyMce.scss": {
+    "file": "assets/tinyMce-63668b12.css",
+    "isEntry": true,
+    "src": "assets/tinyMce.scss"
+  },
+  "node_modules/@webreflection/custom-elements-builtin/esm/index.js": {
+    "file": "assets/index-1b2afe3b.js",
+    "isDynamicEntry": true,
+    "src": "node_modules/@webreflection/custom-elements-builtin/esm/index.js"
+  },
+  "swiper-bundle.css": {
+    "file": "assets/swiper-bundle-6c3c321b.css",
+    "src": "swiper-bundle.css"
+  }
+}

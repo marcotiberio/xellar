@@ -1,0 +1,32 @@
+.logo {
+  @apply top-md;
+  @apply right-0;
+  @apply md:top-sm;
+  @apply md:right-sm;
+  transition: all 0.2s ease-in-out;
+
+  &--small {
+    @apply top-sm;
+    @apply right-sm;
+    @apply md:top-sm;
+    @apply md:right-lg;
+
+    .logo-image {
+      @apply w-[100px];
+      @apply lg:w-[100px];
+    }
+  }
+  
+  &-image {
+    @apply lg:w-[200px];
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.single {
+  flynt-component[name='ScrolltriggerComparison'] {
+    .wrapper {
+      @apply p-0;
+    }
+  }
+}
