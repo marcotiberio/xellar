@@ -20,7 +20,7 @@ function getACFLayout()
             [
                 'label' => __('Title', 'flynt'),
                 'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
-                'name' => 'preContentTitle',
+                'name' => 'headlineTitle',
                 'type' => 'text',
                 'media_upload' => 0,
             ],
@@ -39,7 +39,7 @@ function getACFLayout()
                 'name' => 'image',
                 'type' => 'image',
                 'preview_size' => 'medium',
-                'required' => 1,
+                'required' => 0,
                 'mime_types' => 'jpg,jpeg,png,svg',
                 'wrapper' =>  [
                     'width' => 20,
@@ -51,7 +51,7 @@ function getACFLayout()
                 'type' => 'wysiwyg',
                 'delay' => 1,
                 'media_upload' => 0,
-                'required' => 1,
+                'required' => 0,
                 'wrapper' =>  [
                     'width' => 80,
                 ],

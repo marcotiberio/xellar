@@ -1,15 +1,12 @@
 <flynt-component load:on="visible" name="BlockImageText">
   <div class="wrapper max-w-screen-xl mx-auto p-sm sm:p-md md:p-lg">
-    {% if preContentTitle %}
-      <div class="w-full flex justify-between items-center mb-md md:mb-lg">
-        <h2>{{ preContentTitle }}</h2>
-        <a href="{{ labels.allPostsLink.url }}" class="button--link underline hover:no-underline caption font-bold text-body">{{ labels.allPosts }}</a>
-      </div>
+    {% if headlineTitle %}
+      <h2 class="max-w-screen-md mx-auto flex justify-center items-center text-center text-yellow uppercase">{{ headlineTitle }}</h2>
     {% endif %}
-    <div class="flex flex-col sm:flex-row align-start md:items-center justify-start md:justify-between gap-md lg:gap-xxl" {{ imagePosition ? 'data-image-position="' ~ imagePosition ~ '"' }}>
-      <div class="sm:w-1/3">
+    <div class="h-[40vh] flex flex-col sm:flex-row align-start md:items-center justify-start md:justify-between gap-sm" {{ imagePosition ? 'data-image-position="' ~ imagePosition ~ '"' }}>
+      <div class="sm:w-2/3 h-full">
         {% if image %}
-          <img class="lazyload w-full object-cover aspect-3/4"
+          <img class="lazyload h-full w-full object-cover"
             src="{{ image.src | resize(32) }}"
             data-srcset="{{function('wp_get_attachment_image_srcset', image.id)}}"
             data-sizes="auto"
@@ -19,14 +16,17 @@
           <figcaption>{{ image.caption|e }}</figcaption>
         {% endif %}
       </div>
-      <div class="sm:w-2/3">
-        {{ contentHtml|e('wp_kses_post') }}
+      <div class="sm:w-1/3 h-full py-sm flex flex-col justify-between">
+        {% if contentHtml %}
+          <div>{{ contentHtml|e('wp_kses_post') }}</div>
+        {% endif %}
         {% if buttonLink %}
-          <div class="w-full mt-sm flex justify-center">
+          <div class="w-full mt-sm flex">
             <a 
-              class="button button--plusBlack" 
+              class="button button--yellow" 
               href="{{ buttonLink.url }}" 
               {% if buttonLink.target %} target="{{ buttonLink.target }}" rel="noreferrer noopener"{% endif %}>
+              {{ buttonLink.title }}
             </a>
           </div>
         {% endif %}

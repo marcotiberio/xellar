@@ -80,45 +80,51 @@ body {
 }
 
 h1,
-.h1 {
+.h1,
+.font-h1 {
   font-family: 'Maison Book', 'Trebuchet MS', sans-serif;
   font-size: 2.25rem;
+  line-height: 1;
   margin-bottom: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
-    font-size: 2.25rem;
+    font-size: 6.875rem;
   }
 }
 
 h2,
-.h2 {
+.h2,
+.font-h2 {
   font-family: 'Maison Book', 'Trebuchet MS', sans-serif;
   font-size: 1.75rem;
+  line-height: 1;
   margin-bottom: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
-    font-size: 1.75rem;
+    font-size: 5rem;
   }
 }
 
 h3,
-.h3 {
+.h3,
+.font-h3 {
   font-family: 'Maison Bold', 'Trebuchet MS', sans-serif;
   font-size: 1.25rem;
+  line-height: 1;
   margin-bottom: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
-    font-size: 1.25rem;
+    font-size: 2.813rem;
   }
 }
 
 p,
 .paragraph,
 .body {
-  font-size: 1.5rem;
+  font-size: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   a {
@@ -248,18 +254,18 @@ button {
   cursor: pointer;
   display: flex;
   font: inherit;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.125rem;
   justify-content: center;
   letter-spacing: 0;
-  line-height: 1rem;
-  padding: 10px var(--spacingSmall);
+  line-height: 1;
+  padding: calc(var(--spacingSmall)/2) var(--spacingSmall);
   text-align: center;
   text-transform: uppercase;
+  width: fit-content;
 
   @media (min-width: $breakpoint-desktop) {
-    font-size: 1rem;
-    padding: 10px var(--spacingLarge);
+    font-size: 1.125rem;
+    padding: calc(var(--spacingSmall)/2) var(--spacingSmall);
   }
 
   &:disabled {
@@ -268,16 +274,44 @@ button {
     pointer-events: none;
   }
 
-  &--black {
+  &--outline {
     background-color: transparent;
     border: 1px solid var(--black);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 45%, 91% 0);
     color: var(--black);
     text-decoration: none;
 
     &:hover,
     &:focus {
       background-color: var(--black);
-      color: var(--grey);
+      color: var(--white);
+    }
+  }
+
+  &--yellow {
+    background-color: var(--yellow);
+    border: 1px solid transparent;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 45%, 91% 0);
+    color: var(--black);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--black);
+      color: var(--yellow);
+    }
+  }
+
+  &--black {
+    background-color: var(--black);
+    border: 1px solid transparent;
+    color: var(--yellow);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--white);
+      color: var(--black);
     }
   }
 

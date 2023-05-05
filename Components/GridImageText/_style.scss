@@ -1,0 +1,16 @@
+flynt-component[name='GridImageText'] {
+  [data-grid-columns='1'] {
+    @apply grid-cols-1;
+    @apply md:grid-cols-1;
+  }
+
+  [data-grid-columns='2'] {
+    @apply grid-cols-1;
+    @apply md:grid-cols-2;
+  }
+
+  [data-grid-columns='3'] {
+    @apply grid-cols-1;
+    @apply md:grid-cols-3;
+  }
+}

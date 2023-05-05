@@ -13,8 +13,11 @@ $input-selectors: '[type="tel"], [type="url"], [type="text"], [type="date"], [ty
   --contentMaxWidth: 1000px;
   --containerMaxWidth: 1440px;
 
-  --spacingSmall: 15px;
-  --spacingLarge: 35px;
+  --spacingSmall: 20px;
+  --spacingMedium: 35px;
+  --spacingLarge: 50px;
+  --spacingXLarge: 75px;
+  --spacingXXLarge: 125px;
 
   --black: #000;
   --white: #fff;

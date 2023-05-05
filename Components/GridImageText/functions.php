@@ -19,12 +19,16 @@ function getACFLayout()
             ],
             [
                 'label' => __('Title', 'flynt'),
-                'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
-                'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual',
-                'media_upload' => 0,
-                'delay' => 1,
+                'instructions' => __('Want to add a headline? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
+                'name' => 'headlineTitle',
+                'type' => 'text',
+            ],
+            [
+                'label' => __('Items', 'flynt'),
+                'name' => 'itemsTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
             ],
             [
                 'label' => __('Items', 'flynt'),
@@ -42,8 +46,13 @@ function getACFLayout()
                         'preview_size' => 'medium',
                         'mime_types' => 'jpg,jpeg,png',
                         'wrapper' => [
-                            'width' => 40
+                            'width' => 100
                         ],
+                    ],
+                    [
+                        'label' => __('Title', 'flynt'),
+                        'name' => 'title',
+                        'type' => 'text'
                     ],
                     [
                         'label' => __('Content', 'flynt'),
@@ -53,9 +62,15 @@ function getACFLayout()
                         'media_upload' => 0,
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 60
+                            'width' => 100
                         ],
-                    ]
+                    ],
+                    [
+                        'label' => __('Button', 'flynt'),
+                        'name' => 'buttonLink',
+                        'type' => 'link',
+                        'return_format' => 'array'
+                    ],
                 ]
             ],
             [
@@ -71,23 +86,17 @@ function getACFLayout()
                 'type' => 'group',
                 'layout' => 'row',
                 'sub_fields' => [
-                    FieldVariables\getTheme(),
                     [
-                        'label' => __('Max Columns', 'flynt'),
-                        'name' => 'maxColumns',
-                        'type' => 'number',
-                        'default_value' => 3,
-                        'min' => 1,
-                        'max' => 4,
-                        'step' => 1
+                        'label' => __('Grid Columns', 'flynt'),
+                        'name' => 'gridColumns',
+                        'type' => 'button_group',
+                        'choices' => [
+                            '1' => sprintf('<p>1</p>', __('1', 'flynt')),
+                            '2' => sprintf('<p>2</p>', __('2', 'flynt')),
+                            '3' => sprintf('<p>3</p>', __('3', 'flynt'))
+                        ],
+                        'default' => '3',
                     ],
-                    [
-                        'label' => __('Show as Card', 'flynt'),
-                        'name' => 'card',
-                        'type' => 'true_false',
-                        'default_value' => 0,
-                        'ui' => 1
-                    ]
                 ]
             ]
         ]
