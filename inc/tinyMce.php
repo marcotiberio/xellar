@@ -101,16 +101,6 @@ function getConfig()
                 'icon' => '',
                 'items' => [
                     [
-                        'title' => 'Super Title',
-                        'classes' => 'superTitle',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Super Subtitle',
-                        'classes' => 'superSubtitle',
-                        'selector' => '*'
-                    ],
-                    [
                         'title' => 'Heading 1',
                         'classes' => 'h1',
                         'selector' => '*'
@@ -132,19 +122,14 @@ function getConfig()
                 'icon' => '',
                 'items' => [
                     [
-                        'title' => 'Button',
-                        'classes' => 'button',
-                        'selector' => 'a,button'
-                    ],
-                    [
                         'title' => 'Button Outlined',
-                        'classes' => 'button--outlined',
-                        'selector' => '.button'
+                        'classes' => 'button button--outlined',
+                        'selector' => 'a'
                     ],
                     [
                         'title' => 'Button Text',
-                        'classes' => 'button--text',
-                        'selector' => '.button'
+                        'classes' => 'button button--text',
+                        'selector' => 'a'
                     ]
                 ]
             ],
@@ -153,10 +138,10 @@ function getConfig()
                 'icon' => '',
                 'items' => [
                     [
-                        'title' => 'Quote',
-                        'classes' => 'quote',
+                        'title' => 'Menu',
+                        'classes' => 'font-bodyMenu',
                         'selector' => '*'
-                    ]
+                    ],
                 ]
             ],
         ],

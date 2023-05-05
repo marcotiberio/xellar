@@ -6,24 +6,25 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
     {{ function('wp_head') }}
   </head>
-  <body class="bg-grey">
+  <body class="bg-white">
     <a href="#mainContent" class="skipLink">
       {{ __("Skip to main content", "flynt") }}
     </a>
     {% block layout %}
       <div class="pageWrapper">
-        <header>
+        <header class="w-full">
           {% block header %}
-            <div class="hidden lg:flex mainHeader fixed top-0 left-0 w-screen z-50 flex-row justify-between bg-blue">
-              {{ renderComponent('NavigationMain') }}
-              <a class="logo lg:fixed" href="{{ site.link }}">
-                <img class="logo-image" width="156" height="46" src="/wp-content/uploads/2023/04/Logo.png" alt="Logo">
-              </a>
+            <div class="hidden lg:block w-full p-sm lg:p-lg fixed top-0 left-0 z-50 bg-white">
+              <div class="w-full max-w-screen-xl mx-auto flex flex-row justify-between gap-sm">
+                {{ renderComponent('NavigationMainLeft') }}
+                {{ renderComponent('NavigationMainLogo') }}
+                {{ renderComponent('NavigationMainRight') }}
+              </div>
             </div>
             {{ renderComponent('NavigationBurger') }}
           {% endblock %}
         </header>
-        <main id="mainContent" class="mainContent squares bg-grey" aria-label="{{ __('Content', 'flynt') }}">
+        <main id="mainContent" class="mainContent squares bg-white" aria-label="{{ __('Content', 'flynt') }}">
           {% if function('post_password_required') %}
             {{ function('get_the_password_form') }}
           {% else %}

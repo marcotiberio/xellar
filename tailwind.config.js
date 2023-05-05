@@ -15,9 +15,11 @@ module.exports = {
     colors: {
       white: '#fff',
       black: '#000',
+      grey: '#f9f9f9',
+      darkgrey: '#333',
+      yellow: '#fed300',
       blue: '#263978',
       acqua: '#51bad9',
-      grey: '#d9d9d9',
       azulgrey: '#e6ecee',
       current: 'currentColor',
       transparent: 'transparent'
@@ -54,9 +56,9 @@ module.exports = {
       },
       spacing: {
         sm: '20px',
-        md: '40px',
-        lg: '40px',
-        xl: '80px',
+        md: '35px',
+        lg: '50px',
+        xl: '75px',
         xxl: '125px'
       }
     }

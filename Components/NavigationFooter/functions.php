@@ -21,40 +21,96 @@ add_filter('Flynt/addComponentData?name=NavigationFooter', function ($data) {
 
 Options::addTranslatable('NavigationFooter', [
     [
-        'label' => __('General', 'flynt'),
-        'name' => 'generalTab',
+        'label' => __('Background Image', 'flynt'),
+        'name' => 'BackgroundImageTab',
         'type' => 'tab',
         'placement' => 'top',
         'endpoint' => 0
     ],
-    // [
-    //     'label' => __('Logo', 'flynt'),
-    //     'name' => 'logoFooter',
-    //     'type' => 'image',
-    //     'preview_size' => 'medium',
-    //     'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
-    //     'required' => 0,
-    //     'mime_types' => 'jpg,jpeg,png,svg',
-    //     'wrapper' =>  [
-    //         'width' => 100,
-    //     ]
-    // ],
     [
-        'label' => __('Copyright', 'flynt'),
-        'name' => 'copyrightFooter',
-        'type' => 'text',
+        'label' => __('Background Image', 'flynt'),
+        'name' => 'backgroundImage',
+        'type' => 'image',
+        'preview_size' => 'medium',
+        'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
+        'required' => 0,
+        'mime_types' => 'jpg,jpeg,png,svg',
         'wrapper' =>  [
-            'width' => 50,
+            'width' => 100,
         ]
     ],
     [
-        'label' => __('Email', 'flynt'),
-        'name' => 'emailFooter',
-        'type' => 'link',
-        'return_format' => 'array',
+        'label' => __('Address', 'flynt'),
+        'name' => 'AddressTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Address', 'flynt'),
+        'name' => 'addressFooterHtml',
+        'type' => 'wysiwyg',
+        'delay' => 1,
+        'media_upload' => 0,
+        'required' => 0,
         'wrapper' =>  [
-            'width' => 50,
+            'width' => 100,
+        ],
+    ],
+    [
+        'label' => __('Contacts', 'flynt'),
+        'name' => 'contactsTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Contacts', 'flynt'),
+        'name' => 'contactsFooterHtml',
+        'type' => 'wysiwyg',
+        'delay' => 1,
+        'media_upload' => 0,
+        'required' => 0,
+        'wrapper' =>  [
+            'width' => 100,
+        ],
+    ],
+    [
+        'label' => __('Logo', 'flynt'),
+        'name' => 'logoTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Logo', 'flynt'),
+        'name' => 'logoFooter',
+        'type' => 'image',
+        'preview_size' => 'medium',
+        'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
+        'required' => 0,
+        'mime_types' => 'jpg,jpeg,png,svg',
+        'wrapper' =>  [
+            'width' => 100,
         ]
+    ],
+    [
+        'label' => __('Social', 'flynt'),
+        'name' => 'socialTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Social', 'flynt'),
+        'name' => 'socialFooterHtml',
+        'type' => 'wysiwyg',
+        'delay' => 1,
+        'media_upload' => 0,
+        'required' => 0,
+        'wrapper' =>  [
+            'width' => 100,
+        ],
     ],
     [
         'label' => __('Labels', 'flynt'),

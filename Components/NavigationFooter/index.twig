@@ -1,17 +1,37 @@
-<flynt-component load:on="visible" name="NavigationFooter" class="bg-blue">
-  <div class="w-full max-w-screen-xl mx-auto p-sm flex flex-row justify-between items-center">
-    <div class="w-full flex flex-col lg:flex-row justify-between gap-lg items-center">
-      {% if copyrightFooter or emailFooter %}
-        <div class="w-full: md:w-1/2 flex flex-row justify-start items-center gap-lg">
-          <div class="text-menu text-white font-extrabold">{{ copyrightFooter }}</div>
-          <a href="{{ emailFooter.url }}" class="text-menu text-white font-extrabold hover:underline">{{ emailFooter.title }}</a>
-        </div>
+<flynt-component load:on="visible" name="NavigationFooter" class="bg-cover bg-no-repeat bg-bottom" style="background-image: url('{{ backgroundImage }}');">
+  <div class="w-full max-w-screen-xl mx-auto p-sm lg:p-lg flex flex-row justify-between items-center">
+    <div class="w-full grid grid-cols-1 sm:grid-cols-3 items-center">
+      {# Right #}
+      <div class="flex flex-col gap-lg justify-between text-white">
+        {% if addressFooterHtml %}
+          <div>{{ addressFooterHtml|e('wp_kses_post') }}</div>
+        {% endif %}
+        {% if contactsFooterHtml %}
+          <div>{{ contactsFooterHtml|e('wp_kses_post') }}</div>
+        {% endif %}
+      </div>
+      {# Center #}
+      {% if logoFooter %}
+      <div class="flex justify-center items-center">
+        <img class="logo lazyload"
+          src="{{ logoFooter.src | resize(32) }}"
+          data-srcset="{{function('wp_get_attachment_image_srcset', logoFooter.id)}}"
+          data-sizes="auto">
+      </div>
       {% endif %}
-      {% if menu %}
-      <nav class="navigation w-full: md:w-1/2" aria-label="{{ labels.ariaLabel }}">
-        {% include 'Partials/_menu.twig' with { 'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel } only %}
-      </nav>
-    {% endif %}
+      {# Right #}
+      <div class="flex flex-col gap-lg justify-between text-white">
+        {% if socialFooterHtml %}
+        <div class="socialmedia">
+          {{ socialFooterHtml|e('wp_kses_post') }}
+        </div>
+        {% endif %}
+        {% if menu %}
+          <nav class="navigation w-full" aria-label="{{ labels.ariaLabel }}">
+            {% include 'Partials/_menu.twig' with { 'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel } only %}
+          </nav>
+        {% endif %}
+      </div>
     </div>
   </div>
 </flynt-component>

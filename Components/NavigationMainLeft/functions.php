@@ -8,12 +8,12 @@ use Timber\Timber;
 
 add_action('init', function () {
     register_nav_menus([
-        'navigation_main' => __('Navigation Main', 'flynt')
+        'navigation_main_left' => __('Navigation Main Left', 'flynt')
     ]);
 });
 
-add_filter('Flynt/addComponentData?name=NavigationMain', function ($data) {
-    $data['menu'] = Timber::get_menu('navigation_main') ?? Timber::get_pages_menu();
+add_filter('Flynt/addComponentData?name=NavigationMainLeft', function ($data) {
+    $data['menu'] = Timber::get_menu('navigation_main_left') ?? Timber::get_pages_menu();
     $data['logo'] = [
         'src' => get_theme_mod('custom_header_logo') ? get_theme_mod('custom_header_logo') : Asset::requireUrl('assets/images/logo.svg'),
         'alt' => get_bloginfo('name')
@@ -22,7 +22,7 @@ add_filter('Flynt/addComponentData?name=NavigationMain', function ($data) {
     return $data;
 });
 
-Options::addTranslatable('NavigationMain', [
+Options::addTranslatable('NavigationMainLeft', [
     [
         'label' => __('Call to Action', 'flynt'),
         'name' => 'ctaTab',
