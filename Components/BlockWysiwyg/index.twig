@@ -1,5 +1,5 @@
 <flynt-component load:on="visible" name="BlockWysiwyg">
-  <div class="w-full max-w-screen-xl mx-auto p-sm sm:p-md md:p-lg">
+  <div class="w-full {% if textWidth %} max-w-screen-md {% else %} max-w-screen-max {% endif %} mx-auto p-md sm:p-xl md:p-xxl">
     {{ contentHtml|e('wp_kses_post') }}
   </div>
 </flynt-component>

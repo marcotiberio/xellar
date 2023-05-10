@@ -5,9 +5,9 @@
     "src": "Components/AccordionDefault/script.js"
   },
   "Components/AccordionSystems/script.js": {
-    "file": "assets/script-6d927ffc.js",
+    "file": "assets/script-65a4186f.js",
     "imports": [
-      "_swiper-bundle.min-2c4734cd.js",
+      "_swiper-bundle.min-800ce7a7.js",
       "_helpers-0bb72b7a.js"
     ],
     "isDynamicEntry": true,
@@ -19,9 +19,9 @@
     "src": "Components/BlockPostArchive/script.js"
   },
   "Components/BlockProductSpecs/script.js": {
-    "file": "assets/script-91556f94.js",
+    "file": "assets/script-b5a6ad3b.js",
     "imports": [
-      "_swiper-bundle.min-2c4734cd.js",
+      "_swiper-bundle.min-800ce7a7.js",
       "_helpers-0bb72b7a.js"
     ],
     "isDynamicEntry": true,
@@ -43,6 +43,26 @@
     ],
     "isDynamicEntry": true,
     "src": "Components/GridPostsArchive/script.js"
+  },
+  "Components/HeroSlider/script.js": {
+    "file": "assets/script-9117cb48.js",
+    "imports": [
+      "_swiper-bundle.min-800ce7a7.js",
+      "_pagination-b06a4581.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/HeroSlider/script.js"
+  },
+  "Components/HeroSliderComposite/script.js": {
+    "file": "assets/script-1b944787.js",
+    "imports": [
+      "_swiper-bundle.min-800ce7a7.js",
+      "_pagination-b06a4581.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/HeroSliderComposite/script.js"
   },
   "Components/ListComponents/script.js": {
     "file": "assets/script-6fca4744.js",
@@ -71,35 +91,45 @@
     "src": "Components/NavigationMainLogo/Assets/logo.svg"
   },
   "Components/ScrolltriggerComparison/script.js": {
-    "file": "assets/script-2d5bf466.js",
+    "file": "assets/script-a925b74b.js",
     "imports": [
       "assets/main.js"
     ],
     "isDynamicEntry": true,
     "src": "Components/ScrolltriggerComparison/script.js"
   },
-  "Components/SliderFeatProjects/script.js": {
-    "file": "assets/script-e3aa4d4a.js",
+  "Components/SliderBox/script.js": {
+    "file": "assets/script-b4d0a9a9.js",
     "imports": [
-      "_swiper-bundle.min-2c4734cd.js",
+      "_swiper-bundle.min-800ce7a7.js",
+      "_pagination-b06a4581.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/SliderBox/script.js"
+  },
+  "Components/SliderFeatProjects/script.js": {
+    "file": "assets/script-ecf80066.js",
+    "imports": [
+      "_swiper-bundle.min-800ce7a7.js",
       "_helpers-0bb72b7a.js"
     ],
     "isDynamicEntry": true,
     "src": "Components/SliderFeatProjects/script.js"
   },
   "Components/SliderHorizontal/script.js": {
-    "file": "assets/script-b0b61d87.js",
+    "file": "assets/script-8ce7ae59.js",
     "imports": [
-      "_swiper-bundle.min-2c4734cd.js",
+      "_swiper-bundle.min-800ce7a7.js",
       "_helpers-0bb72b7a.js"
     ],
     "isDynamicEntry": true,
     "src": "Components/SliderHorizontal/script.js"
   },
   "Components/SliderLogos/script.js": {
-    "file": "assets/script-0ddd3ddf.js",
+    "file": "assets/script-ac4d89f2.js",
     "imports": [
-      "_swiper-bundle.min-2c4734cd.js",
+      "_swiper-bundle.min-800ce7a7.js",
       "_helpers-0bb72b7a.js"
     ],
     "isDynamicEntry": true,
@@ -111,11 +141,17 @@
   "_index-2a8ce3c2.js": {
     "file": "assets/index-2a8ce3c2.js"
   },
-  "_swiper-bundle.min-2c4734cd.js": {
+  "_pagination-b06a4581.js": {
+    "file": "assets/pagination-b06a4581.js",
+    "imports": [
+      "_swiper-bundle.min-800ce7a7.js"
+    ]
+  },
+  "_swiper-bundle.min-800ce7a7.js": {
     "css": [
       "assets/swiper-bundle-6c3c321b.css"
     ],
-    "file": "assets/swiper-bundle.min-2c4734cd.js"
+    "file": "assets/swiper-bundle.min-800ce7a7.js"
   },
   "assets/admin.js": {
     "file": "assets/admin-02f88806.js",
@@ -127,21 +163,17 @@
     "isEntry": true,
     "src": "assets/admin.scss"
   },
-  "assets/fonts/Graphik-Semibold.woff2": {
-    "file": "assets/Graphik-Semibold-4391b4dd.woff2",
-    "src": "assets/fonts/Graphik-Semibold.woff2"
+  "assets/fonts/ReplicaLLWeb-Bold.woff2": {
+    "file": "assets/ReplicaLLWeb-Bold-d3a8f20c.woff2",
+    "src": "assets/fonts/ReplicaLLWeb-Bold.woff2"
   },
-  "assets/fonts/MaisonNeue-Bold.woff2": {
-    "file": "assets/MaisonNeue-Bold-32e1e5fe.woff2",
-    "src": "assets/fonts/MaisonNeue-Bold.woff2"
+  "assets/fonts/ReplicaLLWeb-Light.woff2": {
+    "file": "assets/ReplicaLLWeb-Light-54774a40.woff2",
+    "src": "assets/fonts/ReplicaLLWeb-Light.woff2"
   },
-  "assets/fonts/MaisonNeue-Book.woff2": {
-    "file": "assets/MaisonNeue-Book-35924f83.woff2",
-    "src": "assets/fonts/MaisonNeue-Book.woff2"
-  },
-  "assets/fonts/TiemposHeadline-Regular.woff2": {
-    "file": "assets/TiemposHeadline-Regular-2d9b70fd.woff2",
-    "src": "assets/fonts/TiemposHeadline-Regular.woff2"
+  "assets/fonts/ReplicaLLWeb-Regular.woff2": {
+    "file": "assets/ReplicaLLWeb-Regular-d5d54538.woff2",
+    "src": "assets/fonts/ReplicaLLWeb-Regular.woff2"
   },
   "assets/images/logo.svg": {
     "file": "assets/logo-26c0c58f.svg",
@@ -156,20 +188,23 @@
       "Components/BlockProductSpecs/script.js",
       "Components/BlockVideoOembed/script.js",
       "Components/GridPostsArchive/script.js",
+      "Components/HeroSlider/script.js",
+      "Components/HeroSliderComposite/script.js",
       "Components/ListComponents/script.js",
       "Components/ListingHomepage/script.js",
       "Components/NavigationBurger/script.js",
       "Components/ScrolltriggerComparison/script.js",
+      "Components/SliderBox/script.js",
       "Components/SliderFeatProjects/script.js",
       "Components/SliderHorizontal/script.js",
       "Components/SliderLogos/script.js"
     ],
-    "file": "assets/main-605978a7.js",
+    "file": "assets/main-857494ce.js",
     "isEntry": true,
     "src": "assets/main.js"
   },
   "assets/main.scss": {
-    "file": "assets/main-e340c2dc.css",
+    "file": "assets/main-d97e5588.css",
     "isEntry": true,
     "src": "assets/main.scss"
   },
@@ -179,7 +214,7 @@
     "src": "assets/print.scss"
   },
   "assets/tinyMce.scss": {
-    "file": "assets/tinyMce-dc81673e.css",
+    "file": "assets/tinyMce-39b20dea.css",
     "isEntry": true,
     "src": "assets/tinyMce.scss"
   },

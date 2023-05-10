@@ -24,6 +24,12 @@ function getACFLayout()
                 'type' => 'text',
             ],
             [
+                'label' => __('Button', 'flynt'),
+                'name' => 'footerButton',
+                'type' => 'link',
+                'return_format' => 'array'
+            ],
+            [
                 'label' => __('Items', 'flynt'),
                 'name' => 'itemsTab',
                 'type' => 'tab',
@@ -39,20 +45,40 @@ function getACFLayout()
                 'button_label' => __('Add Item', 'flynt'),
                 'sub_fields' => [
                     [
+                        'label' => __('Color Background Box', 'flynt'),
+                        'name' => 'colorBoxBackground',
+                        'type' => 'color_picker',
+                        'wrapper' => [
+                            'width' => 100,
+                        ],
+                    ],
+                    [
                         'label' => __('Image', 'flynt'),
-                        'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
+                        'instructions' => __('Image-Format: JPG, PNG, SVG', 'flynt'),
                         'name' => 'image',
                         'type' => 'image',
-                        'preview_size' => 'medium',
-                        'mime_types' => 'jpg,jpeg,png',
+                        'preview_size' => 'full',
+                        'mime_types' => 'jpg,jpeg,png,svg',
                         'wrapper' => [
-                            'width' => 100
+                            'width' => 50
+                        ],
+                    ],
+                    [
+                        'label' => __('Button', 'flynt'),
+                        'name' => 'buttonLink',
+                        'type' => 'link',
+                        'return_format' => 'array',
+                        'wrapper' => [
+                            'width' => 50
                         ],
                     ],
                     [
                         'label' => __('Title', 'flynt'),
                         'name' => 'title',
-                        'type' => 'text'
+                        'type' => 'text',
+                        'wrapper' => [
+                            'width' => 50
+                        ],
                     ],
                     [
                         'label' => __('Content', 'flynt'),
@@ -62,14 +88,8 @@ function getACFLayout()
                         'media_upload' => 0,
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 100
+                            'width' => 50
                         ],
-                    ],
-                    [
-                        'label' => __('Button', 'flynt'),
-                        'name' => 'buttonLink',
-                        'type' => 'link',
-                        'return_format' => 'array'
                     ],
                 ]
             ],
@@ -95,8 +115,10 @@ function getACFLayout()
                             '2' => sprintf('<p>2</p>', __('2', 'flynt')),
                             '3' => sprintf('<p>3</p>', __('3', 'flynt'))
                         ],
-                        'default' => '3',
+                        'default_value' => '3',
                     ],
+                    FieldVariables\getColorBackground(),
+                    FieldVariables\getColorText(),
                 ]
             ]
         ]

@@ -7,10 +7,9 @@ function theme_add_color_palette()
         'editor-color-palette',
         '#000',
         '#fff',
-        '#263978',
-        '#51bad9',
-        '#e6ecee',
-        '#d9d9d9',
+        '#f9f9f9',
+        '#333',
+        '#fed300',
     );
 }
 add_action('init', 'theme_add_color_palette');

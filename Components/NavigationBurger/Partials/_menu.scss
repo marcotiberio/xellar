@@ -1,7 +1,7 @@
 .menu {
   @include reset-list;
   backface-visibility: hidden;
-  background-color: var(--blue);
+  background-color: var(--white);
   display: flex;
   flex-flow: column;
   height: auto;
@@ -27,7 +27,7 @@
 
   .item {
     align-items: center;
-    border-top: 2px solid var(--grey);
+    border-top: 1px solid var(--grey);
     display: flex;
     flex-grow: 1;
     justify-content: center;
@@ -35,10 +35,9 @@
 
   .link {
     @include reset-link;
-    color: var(--white);
+    color: var(--black);
     display: block;
-    font-weight: 800;
-    padding: 0.9rem 1.25rem;
+    padding: var(--spacingSmall);
     text-align: center;
     text-decoration: none;
   }

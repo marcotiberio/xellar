@@ -6,7 +6,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
     {{ function('wp_head') }}
   </head>
-  <body class="bg-white">
+  <body class="bg-grey">
     <a href="#mainContent" class="skipLink">
       {{ __("Skip to main content", "flynt") }}
     </a>
@@ -24,7 +24,7 @@
             {{ renderComponent('NavigationBurger') }}
           {% endblock %}
         </header>
-        <main id="mainContent" class="mainContent squares bg-white" aria-label="{{ __('Content', 'flynt') }}">
+        <main id="mainContent" class="mainContent bg-grey" aria-label="{{ __('Content', 'flynt') }}">
           {% if function('post_password_required') %}
             {{ function('get_the_password_form') }}
           {% else %}
@@ -33,7 +33,7 @@
             {% endblock %}
           {% endif %}
         </main>
-        <footer class="mainFooter mt-[120px]">
+        <footer class="mainFooter">
           {% block footer %}
             {{ renderComponent('NavigationFooter') }}
           {% endblock %}

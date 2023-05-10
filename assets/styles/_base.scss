@@ -4,34 +4,26 @@
 
 @font-face {
   font-display: swap;
-  font-family: 'Maison Book';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../assets/fonts/MaisonNeue-Book.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Maison Bold';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../assets/fonts/MaisonNeue-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Tiempos';
+  font-family: 'Replica';
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/TiemposHeadline-Regular.woff2') format('woff2');
+  src: url('../assets/fonts/ReplicaLLWeb-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Graphik Semibold';
+  font-family: 'Replica Light';
   font-style: normal;
-  font-weight: 600;
-  src: url('../assets/fonts/Graphik-Semibold.woff2') format('woff2');
+  font-weight: 300;
+  src: url('../assets/fonts/ReplicaLLWeb-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Replica Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/ReplicaLLWeb-Bold.woff2') format('woff2');
 }
 
 // body {
@@ -52,40 +44,20 @@ html {
 
 body {
   color: var(--color-text);
-  font-family: 'Maison Book', 'Trebuchet MS', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #{$heading-selectors} {
   line-height: calc(1em + 0.5rem);
 }
 
-.superTitle {
-  font-family: 'Tiempos', 'Trebuchet MS', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-
-  @media (min-width: $breakpoint-desktop) {
-    font-size: 4.375rem;
-  }
-}
-
-.superSubtitle {
-  font-family: 'Tiempos', 'Trebuchet MS', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-
-  @media (min-width: $breakpoint-desktop) {
-    font-size: 1.875rem;
-  }
-}
-
 h1,
 .h1,
 .font-h1 {
-  font-family: 'Maison Book', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', 'Trebuchet MS', sans-serif;
   font-size: 2.25rem;
   line-height: 1;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 6.875rem;
@@ -95,10 +67,10 @@ h1,
 h2,
 .h2,
 .font-h2 {
-  font-family: 'Maison Book', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', 'Trebuchet MS', sans-serif;
   font-size: 1.75rem;
   line-height: 1;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 5rem;
@@ -108,13 +80,23 @@ h2,
 h3,
 .h3,
 .font-h3 {
-  font-family: 'Maison Bold', 'Trebuchet MS', sans-serif;
-  font-size: 1.25rem;
+  font-family: 'Replica', 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
     font-size: 2.813rem;
+  }
+}
+
+.font-smallTitle {
+  font-family: 'Replica', 'Trebuchet MS', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.875rem;
   }
 }
 
@@ -133,7 +115,7 @@ p,
 }
 
 .bodySmall {
-  font-family: 'Maison Book', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', 'Trebuchet MS', sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
 
@@ -143,7 +125,7 @@ p,
 }
 
 .font-bodyMenu {
-  font-family: 'Maison Book', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', 'Trebuchet MS', sans-serif;
   font-size: 1rem;
 
   @media (min-width: $breakpoint-desktop) {
@@ -254,6 +236,7 @@ button {
   cursor: pointer;
   display: flex;
   font: inherit;
+  font-family: 'Replica Light', 'Trebuchet MS', sans-serif;
   font-size: 1.125rem;
   justify-content: center;
   letter-spacing: 0;
@@ -723,4 +706,18 @@ flynt-component {
 [data-theme] {
   background-color: var(--color-background);
   color: var(--color-text);
+}
+
+/**
+* Custom Classes
+*/
+
+.angle {
+  &-tr {
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 45%, 91% 0);
+  }
+
+  &-br {
+    clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 90%, 100% 0);
+  }
 }

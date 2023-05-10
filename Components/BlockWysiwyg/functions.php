@@ -18,6 +18,18 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
+                'label' => __('Text Width', 'flynt'),
+                'name' => 'textWidth',
+                'type' => 'true_false',
+                'default_value' => 1,
+                'ui' => 1,
+                'ui_on_text' => __('Narrow', 'flynt'),
+                'ui_off_text' => __('Wide', 'flynt'),
+                'wrapper' => [
+                    'width' => 100
+                ]
+            ],
+            [
                 'label' => __('Content', 'flynt'),
                 'name' => 'contentHtml',
                 'type' => 'wysiwyg',

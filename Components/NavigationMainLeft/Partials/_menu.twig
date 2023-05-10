@@ -3,7 +3,7 @@
     {# regular menu item #}
     {% if not item.children %}
       <li class="item flex align-middle items-center font-bodyMenu {{- item.current ? ' current-menu-item underline underline-offset-[20px]' }}">
-        <a class="link font-bodyMenu text-darkgrey flex align-middle items-center hover:underline hover:underline-offset-[20px] text-currentColor font-extrabold transition-transform duration-200 ease-in-out" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>
+        <a class="link font-bodyMenu text-darkgrey flex align-middle items-center hover:underline hover:underline-offset-[20px] text-currentColor transition-transform duration-200 ease-in-out" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>
           {{ item.title }}
         </a>
       </li>
@@ -11,13 +11,13 @@
     {# menu with submenu item #}
     {% if item.children %}
       <li class="item flex align-middle items-center open-submenu font-bodyMenu {{- item.current ? ' current-menu-item underline underline-offset-[20px]' }}" >
-        <a class="link font-bodyMenu text-darkgrey flex align-middle items-center no-underline hover:underline hover:underline-offset-[20px] text-currentColor font-extrabold transition-transform duration-200 ease-in-out" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>
+        <a class="link font-bodyMenu text-darkgrey flex align-middle items-center no-underline hover:underline hover:underline-offset-[20px] text-currentColor transition-transform duration-200 ease-in-out" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>
           {{ item.title }}
         </a>
         <ul class="menu submenu">
           {% for subitem in item.children %}
             <li class="item {{- item.current ? ' current-menu-item underline underline-offset-[20px]' }}">
-              <a class="link flex text-darkgrey align-middle items-center no-underline hover:underline hover:underline-offset-[20px] text-currentColor font-normal transition-transform duration-200 ease-in-out" href="{{ subitem.link }}">{{ subitem.title }}</a>
+              <a class="link flex text-darkgrey align-middle items-center no-underline hover:underline hover:underline-offset-[20px] text-currentColor transition-transform duration-200 ease-in-out" href="{{ subitem.link }}">{{ subitem.title }}</a>
             </li>
           {% endfor %}
         </ul>

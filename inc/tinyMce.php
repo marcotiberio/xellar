@@ -84,10 +84,9 @@ function getConfig()
         'textcolor_map' => [
             '000', 'Black',
             'fff', 'White',
-            '263978', 'Blue',
-            '51bad9', 'Acqua',
-            'd9d9d9', 'Grey',
-            'azulgrey', 'Azulgrey',
+            'fed300', 'Yellow',
+            '333', 'Dark Grey',
+            'f9f9f9', 'Grey',
         ],
         'blockformats' => [
             'Paragraph' => 'p',
@@ -123,12 +122,17 @@ function getConfig()
                 'items' => [
                     [
                         'title' => 'Button Outlined',
-                        'classes' => 'button button--outlined',
+                        'classes' => 'button button--outline',
                         'selector' => 'a'
                     ],
                     [
-                        'title' => 'Button Text',
-                        'classes' => 'button button--text',
+                        'title' => 'Button Yellow',
+                        'classes' => 'button button--yellow',
+                        'selector' => 'a'
+                    ],
+                    [
+                        'title' => 'Button Black',
+                        'classes' => 'button button--yellow',
                         'selector' => 'a'
                     ]
                 ]
