@@ -37,7 +37,7 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   scroll-behavior: smooth;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 16px;
   }
 }
@@ -55,11 +55,12 @@ h1,
 .h1,
 .font-h1 {
   font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 2.25rem;
+  font-size: 4rem;
   line-height: 1;
   // margin-bottom: 1rem;
+  word-break: break-word;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 6.875rem;
   }
 }
@@ -68,11 +69,12 @@ h2,
 .h2,
 .font-h2 {
   font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 1.75rem;
+  font-size: 3rem;
   line-height: 1;
   // margin-bottom: 1rem;
+  word-break: break-word;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 5rem;
   }
 }
@@ -81,21 +83,21 @@ h3,
 .h3,
 .font-h3 {
   font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   line-height: 1;
   // margin-bottom: 1rem;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 2.813rem;
   }
 }
 
 .font-smallTitle {
   font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 1.875rem;
   }
 }
@@ -105,7 +107,7 @@ h3,
   font-size: 1.125rem;
   line-height: 1;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 1.125rem;
   }
 }
@@ -115,7 +117,7 @@ p,
 .body {
   font-size: 1rem;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 1rem;
   }
 
@@ -129,7 +131,7 @@ p,
   font-size: 1rem;
   margin-bottom: 1rem;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 1rem;
   }
 }
@@ -138,7 +140,7 @@ p,
   font-family: 'Replica', 'Trebuchet MS', sans-serif;
   font-size: 1rem;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-mobile) {
     font-size: 1.125rem;
   }
 }
@@ -612,8 +614,8 @@ flynt-component {
 
 .mainContent {
   @apply mt-[65px];
-  @apply lg:mt-[150px];
-  @apply lg:min-h-[calc(100vh_-_150px)];
+  @apply lg:mt-[120px];
+  @apply lg:min-h-[calc(100vh_-_120px)];
 }
 
 .componentSpacing {

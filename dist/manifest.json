@@ -44,6 +44,14 @@
     "isDynamicEntry": true,
     "src": "Components/GridPostsArchive/script.js"
   },
+  "Components/HeroImageText/script.js": {
+    "file": "assets/script-ecbf5980.js",
+    "imports": [
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/HeroImageText/script.js"
+  },
   "Components/HeroSlider/script.js": {
     "file": "assets/script-2fd5cef0.js",
     "imports": [
@@ -55,7 +63,7 @@
     "src": "Components/HeroSlider/script.js"
   },
   "Components/HeroSliderComposite/script.js": {
-    "file": "assets/script-8452eb42.js",
+    "file": "assets/script-3caab8cc.js",
     "imports": [
       "_swiper-bundle.min-800ce7a7.js",
       "_pagination-b06a4581.js",
@@ -91,7 +99,7 @@
     "src": "Components/NavigationMainLogo/Assets/logo.svg"
   },
   "Components/ScrolltriggerComparison/script.js": {
-    "file": "assets/script-e6c50059.js",
+    "file": "assets/script-fcb2a6b9.js",
     "imports": [
       "assets/main.js"
     ],
@@ -125,6 +133,16 @@
     ],
     "isDynamicEntry": true,
     "src": "Components/SliderHorizontal/script.js"
+  },
+  "Components/SliderImages/script.js": {
+    "file": "assets/script-8452eb42.js",
+    "imports": [
+      "_swiper-bundle.min-800ce7a7.js",
+      "_pagination-b06a4581.js",
+      "_helpers-0bb72b7a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "Components/SliderImages/script.js"
   },
   "Components/SliderLogos/script.js": {
     "file": "assets/script-ac4d89f2.js",
@@ -188,6 +206,7 @@
       "Components/BlockProductSpecs/script.js",
       "Components/BlockVideoOembed/script.js",
       "Components/GridPostsArchive/script.js",
+      "Components/HeroImageText/script.js",
       "Components/HeroSlider/script.js",
       "Components/HeroSliderComposite/script.js",
       "Components/ListComponents/script.js",
@@ -197,14 +216,15 @@
       "Components/SliderBox/script.js",
       "Components/SliderFeatProjects/script.js",
       "Components/SliderHorizontal/script.js",
+      "Components/SliderImages/script.js",
       "Components/SliderLogos/script.js"
     ],
-    "file": "assets/main-e2e939ad.js",
+    "file": "assets/main-fdba09fe.js",
     "isEntry": true,
     "src": "assets/main.js"
   },
   "assets/main.scss": {
-    "file": "assets/main-569ef3c2.css",
+    "file": "assets/main-ac99289f.css",
     "isEntry": true,
     "src": "assets/main.scss"
   },
@@ -214,7 +234,7 @@
     "src": "assets/print.scss"
   },
   "assets/tinyMce.scss": {
-    "file": "assets/tinyMce-1b0b9760.css",
+    "file": "assets/tinyMce-dbd96ee0.css",
     "isEntry": true,
     "src": "assets/tinyMce.scss"
   },

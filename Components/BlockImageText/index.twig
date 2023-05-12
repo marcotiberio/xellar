@@ -3,7 +3,7 @@
     {% if headlineTitle %}
       <h2 class="max-w-screen-md mx-auto flex justify-center items-center text-center text-yellow uppercase">{{ headlineTitle }}</h2>
     {% endif %}
-    <div class="h-auto lg:h-[40vh] flex flex-col sm:flex-row align-start md:items-center justify-start md:justify-between gap-sm bg-white" {{ imagePosition ? 'data-image-position="' ~ imagePosition ~ '"' }}>
+    <div class="h-auto lg:h-[40vh] flex align-start md:items-center justify-start md:justify-between gap-sm bg-white" {{ imagePosition ? 'data-image-position="' ~ imagePosition ~ '"' }}>
       <div class="sm:w-2/3 h-full">
         {% if image %}
           <img class="lazyload h-full w-full object-cover"

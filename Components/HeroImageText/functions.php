@@ -3,12 +3,24 @@
 namespace Flynt\Components\HeroImageText;
 
 use Flynt\FieldVariables;
+use Flynt\Utils\Oembed;
+
+add_filter('Flynt/addComponentData?name=HeroImageText', function ($data) {
+    $data['oembed'] = Oembed::setSrcAsDataAttribute(
+        $data['oembed'],
+        [
+            'autoplay' => 'true'
+        ]
+    );
+
+    return $data;
+});
 
 function getACFLayout()
 {
     return [
         'name' => 'HeroImageText',
-        'label' => __('Hero: Image Text', 'flynt'),
+        'label' => __('Hero: Image/Video/text', 'flynt'),
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -18,7 +30,7 @@ function getACFLayout()
                 'endpoint' => 0,
             ],
             [
-                'label' => __('Image', 'flynt'),
+                'label' => __('Preview Image', 'flynt'),
                 'instructions' => __('Image-Format: JPG, PNG, SVG.', 'flynt'),
                 'name' => 'image',
                 'type' => 'image',
@@ -31,15 +43,27 @@ function getACFLayout()
             ],
             [
                 'label' => __('Video', 'flynt'),
-                'instructions' => __('Video-Format: mp4.', 'flynt'),
-                'name' => 'video',
-                'type' => 'file',
-                'return_format' => 'url',
-                'mime_types' => 'mp4',
-                'wrapper' => [
+                'name' => 'oembed',
+                'type' => 'oembed',
+                'required' => 1,
+                'videoParams' => [
+                    'autoplay' => 1,
+                ],
+                'wrapper' =>  [
                     'width' => 50,
-                ]
+                ],
             ],
+            // [
+            //     'label' => __('Video', 'flynt'),
+            //     'instructions' => __('Video-Format: mp4.', 'flynt'),
+            //     'name' => 'video',
+            //     'type' => 'file',
+            //     'return_format' => 'url',
+            //     'mime_types' => 'mp4',
+            //     'wrapper' => [
+            //         'width' => 50,
+            //     ]
+            // ],
             [
                 'label' => __('Title', 'flynt'),
                 'name' => 'title',

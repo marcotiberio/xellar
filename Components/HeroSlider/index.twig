@@ -1,6 +1,6 @@
 <flynt-component load:on="visible" name="HeroSlider">
   <script type="application/json">{{ jsonData|json_encode }}</script>
-  <div class="h-full w-full pb-md px-sm md:pb-lg md:px-lg">
+  <div class="h-full w-full py-md px-sm md:py-lg md:px-md">
     <div data-ref="slider" class="slider swiper-container w-full h-full">
       <div data-slider-pagination data-ref="pagination" class="slider-pagination swiper-pagination-fraction"></div>
       <button type="button" data-ref="prev" class="slider-button slider-button--prev" aria-label="{{ sliderOptions.a11y.prevSlideMessage|e }}">

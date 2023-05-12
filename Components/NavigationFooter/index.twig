@@ -1,8 +1,8 @@
 <flynt-component load:on="visible" name="NavigationFooter" class="bg-cover bg-no-repeat bg-bottom" style="background-image: url('{{ backgroundImage }}');">
   <div class="w-full max-w-screen-xl mx-auto p-sm lg:p-lg flex flex-row justify-between items-center">
-    <div class="w-full grid grid-cols-1 sm:grid-cols-3 items-center">
+    <div class="w-full grid grid-cols-1 sm:grid-cols-3 items-center gap-md sm:gap-sm">
       {# Right #}
-      <div class="flex flex-col gap-lg justify-between text-white">
+      <div class="flex flex-row sm:flex-col gap-lg justify-between text-white">
         {% if addressFooterHtml %}
           <div>{{ addressFooterHtml|e('wp_kses_post') }}</div>
         {% endif %}
@@ -20,7 +20,7 @@
       </div>
       {% endif %}
       {# Right #}
-      <div class="flex flex-col gap-lg justify-between text-white">
+      <div class="flex flex-col gap-sm sm:gap-lg justify-between text-white">
         {% if socialFooterHtml %}
         <div class="socialmedia">
           {{ socialFooterHtml|e('wp_kses_post') }}
