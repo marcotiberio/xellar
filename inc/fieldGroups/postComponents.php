@@ -101,7 +101,6 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockCta\getACFLayout(),
                     Components\BlockImageTextPost\getACFLayout(),
                     Components\BlockManifesto\getACFLayout(),
-                    Components\BlockProductSpecs\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\ListingPartners\getACFLayout(),
                     Components\ScrolltriggerComparison\getACFLayout()

@@ -1,9 +1,9 @@
 <flynt-component load:on="visible" name="HeroSlider">
   <script type="application/json">{{ jsonData|json_encode }}</script>
-  <div class="h-full w-full pb-md px-sm md:pb-lg md:px-md">
+  <div class="h-full w-full pb-md px-sm md:pb-lg md:px-lg">
     <div data-ref="slider" class="slider swiper-container w-full h-full">
       <div data-slider-pagination data-ref="pagination" class="slider-pagination swiper-pagination-fraction"></div>
-      <button type="button" data-ref="prev" class="slider-button slider-button--prev">
+      <button type="button" data-ref="prev" class="slider-button slider-button--prev" aria-label="{{ sliderOptions.a11y.prevSlideMessage|e }}">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
           <g clip-path="url(#clip0_172_2512)">
             <path d="M6.875 20.625L0.625001 14.375L6.875 8.125" stroke="black" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -16,7 +16,7 @@
           </defs>
         </svg>
       </button>
-      <button type="button" data-ref="next" class="slider-button slider-button--next">
+      <button type="button" data-ref="next" class="slider-button slider-button--next" aria-label="{{ sliderOptions.a11y.prevSlideMessage|e }}">
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M23.125 9.375L29.375 15.625L23.125 21.875" stroke="black" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M29.375 15.625H0.625" stroke="black" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>

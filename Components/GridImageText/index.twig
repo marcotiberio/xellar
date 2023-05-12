@@ -10,9 +10,9 @@
     {% endif %}
     <div 
       class="w-full max-w-screen-xl mx-auto mt-md md:mt-xl grid gap-sm"
-       {{ options.gridColumns ? 'data-grid-columns="' ~ options.gridColumns ~ '"' }}>
+      {{ options.gridColumns ? 'data-grid-columns="' ~ options.gridColumns ~ '"' }}>
       {% for item in items %}
-        <div class="bg-white flex flex-col" style="background-color:{% if item.colorBoxBackground %}{{ options.colorBoxBackground }}{% else %}transparent{% endif %};">
+        <div class="flex flex-col">
           {% if item.image %}
             {% if item.image.post_mime_type == 'image/svg+xml'%}
               <figure class="figure p-sm flex flex-row justify-start items-start">
@@ -32,10 +32,10 @@
               </figure>
             {% endif %}
           {% endif %}
-          <div class="w-full flex flex-col grow justify-between">
+          <div class="w-full flex flex-col grow justify-between angle-tr" style="background-color:{% if item.colorBoxBackground %}{{ item.colorBoxBackground }}{% else %}var(--white){% endif %};">
             <div class="w-full flex flex-col p-sm">
               {% if item.title %}
-                <div class="font-h3">{{ item.title }}</div>
+                <div class="pb-sm font-h3">{{ item.title }}</div>
               {% endif %}
               {% if item.contentHtml %}
                 <div class="pt-sm border-t">{{ item.contentHtml|e('wp_kses_post') }}</div>
@@ -43,7 +43,7 @@
             </div>
             {% if item.buttonLink %}
               <div class="w-full p-sm">
-                <a class="button button--yellow mt-lg" href="{{ item.buttonLink.url }}"{% if item.buttonLink.target %} target="{{ item.buttonLink.target }}" rel="noreferrer noopener"{% endif %}>
+                <a class="button button--outline mt-lg" href="{{ item.buttonLink.url }}"{% if item.buttonLink.target %} target="{{ item.buttonLink.target }}" rel="noreferrer noopener"{% endif %}>
                   {{ item.buttonLink.title|e }}
                 </a>
               </div>

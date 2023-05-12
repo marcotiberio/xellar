@@ -2,11 +2,9 @@ import Swiper, { Navigation, A11y, Autoplay, Pagination } from 'swiper'
 import 'swiper/css/bundle'
 import { buildRefs, getJSON } from '@/assets/scripts/helpers.js'
 
-Swiper.use([Navigation, A11y, Autoplay, Pagination])
-
-export default function (heroSlider) {
-  const refs = buildRefs(heroSlider)
-  const data = getJSON(heroSlider)
+export default function (el) {
+  const refs = buildRefs(el)
+  const data = getJSON(el)
   const swiper = initSlider(refs, data)
   return () => swiper.destroy()
 }
@@ -14,7 +12,7 @@ export default function (heroSlider) {
 function initSlider (refs, data) {
   const { options } = data
   const config = {
-    modules: [Navigation, A11y, Autoplay],
+    modules: [Navigation, A11y, Autoplay, Pagination],
     a11y: options.a11y,
     slidesPerView: 1,
     spaceBetween: 0,

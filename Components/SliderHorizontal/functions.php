@@ -7,6 +7,9 @@ use Flynt\Utils\Options;
 
 add_filter('Flynt/addComponentData?name=SliderHorizontal', function ($data) {
     $translatableOptions = Options::getTranslatable('SliderOptions');
+    $data['jsonData'] = [
+        'options' => array_merge($translatableOptions, $data['options']),
+    ];
     return $data;
 });
 

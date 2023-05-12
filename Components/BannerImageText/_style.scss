@@ -26,32 +26,4 @@ flynt-component[name='BannerImageText'] {
     @apply md:bottom-xl;
     @apply md:right-xl;
   }
-
-  .figure {
-    background: var(--black);
-    background: linear-gradient(180deg, var(--black) 40%, var(--white) 100%);
-    margin: 0 auto;
-
-    &[data-image-size='small'] {
-      max-width: 375px;
-    }
-
-    &[data-image-size='medium'] {
-      max-width: var(--content-max-width);
-    }
-
-    &[data-image-size='large'] {
-      max-width: var(--content-max-width-large);
-    }
-
-    &[data-image-size='full'] {
-      max-width: 100%;
-
-      .caption {
-        margin-inline: auto;
-        max-width: var(--container-max-width);
-        padding-inline: var(--container-padding);
-      }
-    }
-  }
 }

@@ -37,6 +37,8 @@ flynt-component[name='HeroSliderComposite'] {
     flex-flow: row wrap;
     gap: var(--spacingSmall);
     justify-content: space-between;
+    position: absolute;
+    top: 400px;
   }
 
   .swiper-pagination-bullet {
