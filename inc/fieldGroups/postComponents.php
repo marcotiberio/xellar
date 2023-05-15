@@ -98,12 +98,11 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
-                    Components\BlockCta\getACFLayout(),
-                    Components\BlockImageTextPost\getACFLayout(),
-                    Components\BlockManifesto\getACFLayout(),
+                    Components\BlockImageText\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
-                    Components\ListingPartners\getACFLayout(),
-                    Components\ScrolltriggerComparison\getACFLayout()
+                    Components\GridImageText\getACFLayout(),
+                    Components\SliderBox\getACFLayout(),
+                    Components\SliderImages\getACFLayout(),
                 ],
             ],
         ],

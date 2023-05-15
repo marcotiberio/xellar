@@ -2,19 +2,8 @@
 
 {% block content %}
   <article class="post">
-    <header class="post-header w-full max-w-screen-xl mx-auto p-sm sm:p-md md:p-lg flex flex-col gap-sm">
-      {# {% if post.thumbnail %}
-      <div class="featuredImage w-full grow">
-        <img class="figure-image lazyload object-cover aspect-square md:aspect-2/1 h-auto"
-          src="{{ post.thumbnail.src }}"
-          data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
-          data-sizes="auto">
-      </div>
-      {% endif %} #}
-      <div class="h-auto lg:h-auto w-full grow flex flex-col justify-start gap-sm">
-        <div class="h2">{{ post.title }}</div>
-      </div>
-      {# {{ renderComponent('BlockPostHeader', { post: post }) }} #}
+    <header class="post-header w-full max-w-screen-xl mx-auto flex flex-col gap-sm md:gap-md">
+      {{ renderComponent('BlockPostHeader', { post: post }) }}
     </header>
     <section class="post-main">
       {% for component in post.meta('postComponents') %}

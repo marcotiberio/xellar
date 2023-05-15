@@ -5,8 +5,7 @@
     {% if contentTitle %}
     <div 
       class="w-full h-full {# {% if image %}h-full{% else %}h-[calc(100vh_-_105px)]{% endif %}  #} block" 
-      {{ titlePosition ? 'data-title-position="' ~ titlePosition ~ '"' }} 
-      style="background-color:{% if options.colorBackground %}{{ options.colorBackground }}{% else %}var(--black){% endif %};">
+      {{ titlePosition ? 'data-title-position="' ~ titlePosition ~ '"' }} >
       <div class="w-full md:w-3/4 pb-sm lg:pb-md">
         {{ contentTitle }}
       </div>

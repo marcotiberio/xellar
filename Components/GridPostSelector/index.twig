@@ -12,7 +12,7 @@
       class="w-full max-w-screen-xl mx-auto mt-md md:mt-xl grid gap-sm"
       {{ options.gridColumns ? 'data-grid-columns="' ~ options.gridColumns ~ '"' }}>
       {% for post in selectedPosts %}
-        <div class="grid-item flex flex-col">
+        <div class="grid-item flex flex-col bg-white">
           {% if post.thumbnail %}
             <figure class="figure w-full">
               <img class="lazyload w-full object-cover aspect-video"

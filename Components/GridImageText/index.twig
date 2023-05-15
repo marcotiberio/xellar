@@ -24,7 +24,7 @@
               </figure>
             {% else %}
               <figure class="figure w-full angle-br">
-                <img class="lazyload w-full object-cover aspect-4/3"
+                <img class="lazyload w-full object-cover"
                   src="{{ item.image.src | resize(32) }}"
                   data-srcset="{{function('wp_get_attachment_image_srcset', item.image.id)}}"
                   data-sizes="auto"
