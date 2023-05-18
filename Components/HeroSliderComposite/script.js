@@ -14,7 +14,7 @@ function initSlider (refs, data) {
   const config = {
     modules: [Navigation, A11y, Autoplay, Pagination],
     a11y: options.a11y,
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 0,
     pagination: {
       el: refs.pagination,

@@ -1,5 +1,5 @@
-<flynt-component load:on="visible" name="HeroImageText" class="">
-  <div class="wrapper w-full mx-auto">
+<flynt-component load:on="visible" name="HeroImageText" class="{% if image or oembed %}-mb-[70px] mt-0 sm:-mb-[85px] md:-mb-[100px]{% else %}-mb-sm -mt-sm sm:-mb-md sm:-mt-md md:-mb-lg md:-mt-lg{% endif %}">
+  <div class="wrapper w-full mx-auto py-sm sm:py-md md:py-lg">
     {# {% if headlineTitle %}
       <h2 class="max-w-screen-md mx-auto flex justify-center items-center text-center text-yellow uppercase">{{ headlineTitle }}</h2>
     {% endif %} #}

@@ -63,7 +63,7 @@
     "src": "Components/HeroSlider/script.js"
   },
   "Components/HeroSliderComposite/script.js": {
-    "file": "assets/script-3caab8cc.js",
+    "file": "assets/script-2b7dbc94.js",
     "imports": [
       "_swiper-bundle.min-800ce7a7.js",
       "_pagination-b06a4581.js",
@@ -99,7 +99,7 @@
     "src": "Components/NavigationMainLogo/Assets/logo.svg"
   },
   "Components/ScrolltriggerComparison/script.js": {
-    "file": "assets/script-fcb2a6b9.js",
+    "file": "assets/script-0648cf57.js",
     "imports": [
       "assets/main.js"
     ],
@@ -219,12 +219,12 @@
       "Components/SliderImages/script.js",
       "Components/SliderLogos/script.js"
     ],
-    "file": "assets/main-fdba09fe.js",
+    "file": "assets/main-74931ee8.js",
     "isEntry": true,
     "src": "assets/main.js"
   },
   "assets/main.scss": {
-    "file": "assets/main-f25f3f4f.css",
+    "file": "assets/main-a8c39f67.css",
     "isEntry": true,
     "src": "assets/main.scss"
   },
@@ -234,7 +234,7 @@
     "src": "assets/print.scss"
   },
   "assets/tinyMce.scss": {
-    "file": "assets/tinyMce-dbd96ee0.css",
+    "file": "assets/tinyMce-fbddd979.css",
     "isEntry": true,
     "src": "assets/tinyMce.scss"
   },

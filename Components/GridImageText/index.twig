@@ -1,5 +1,5 @@
 <flynt-component load:on="visible" name="GridImageText" style="background-color:{% if options.colorBackground %}{{ options.colorBackground }}{% else %}var(--grey){% endif %};">
-  <div class="wrapper max-w-screen-xl mx-auto p-sm sm:p-md md:p-lg">
+  <div class="wrapper boxed max-w-screen-xl mx-auto">
     {% if headlineTitle %}
       <h2 
         class="max-w-screen-lg mx-auto mb-md md:mb-xl flex justify-center items-center text-center uppercase"
@@ -23,7 +23,7 @@
                   alt="{{ item.image.alt|e }}">
               </figure>
             {% else %}
-              <figure class="figure w-full angle-br">
+              <figure class="figure figureImage w-full">
                 <img class="lazyload w-full object-cover"
                   src="{{ item.image.src | resize(32) }}"
                   data-srcset="{{function('wp_get_attachment_image_srcset', item.image.id)}}"
@@ -32,7 +32,7 @@
               </figure>
             {% endif %}
           {% endif %}
-          <div class="w-full flex flex-col grow justify-between angle-tr" style="background-color:{% if item.colorBoxBackground %}{{ item.colorBoxBackground }}{% else %}var(--white){% endif %};">
+          <div class="w-full flex flex-col grow justify-between" style="background-color:{% if item.colorBoxBackground %}{{ item.colorBoxBackground }}{% else %}var(--white){% endif %};">
             <div class="w-full flex flex-col p-sm">
               {% if item.title %}
                 <div class="pb-sm font-h3">{{ item.title }}</div>

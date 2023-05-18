@@ -16,6 +16,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
                     Components\BannerImageText\getACFLayout(),
+                    Components\BlockCollapse\getACFLayout(),
                     Components\BlockCta\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
@@ -25,6 +26,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\HeroImageText\getACFLayout(),
                     Components\HeroSlider\getACFLayout(),
                     Components\HeroSliderComposite\getACFLayout(),
+                    Components\ListTextLink\getACFLayout(),
                     Components\SliderBox\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                 ],

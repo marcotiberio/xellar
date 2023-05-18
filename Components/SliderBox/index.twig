@@ -3,7 +3,7 @@
   class="pb-0 lg:pb-xl overflow-hidden"
 >
   <script type="application/json">{{ jsonData|json_encode }}</script>
-  <div class="wrapper w-screen mx-auto p-sm sm:p-md md:p-lg">
+  <div class="wrapper w-screen mx-auto boxed">
     {% if headlineTitle %}
       <h2 class="max-w-screen-lg mx-auto flex justify-center items-center text-center text-yellow uppercase">{{ headlineTitle }}</h2>
     {% endif %}
@@ -25,7 +25,7 @@
       <div class="swiper-wrapper">
         {% for box in boxes %}
           <div 
-            class="slider-item swiper-slide relative w-full h-auto p-sm lg:mr-md flex flex-col justify-between bg-white overflow-hidden" 
+            class="slider-item swiper-slide relative w-full h-auto min-h-[300px] md:min-h-[360px] p-sm lg:mr-md flex flex-col justify-between bg-white overflow-hidden" 
             {# style="background-color: {% if box.colorBackground %}{{ box.colorBackground }}{% else %}var(--secondary){% endif %}; color:{% if box.colorText %}{{ box.colorText }}{% else %}var(--white){% endif %};" #}
             >
             <div>

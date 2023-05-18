@@ -32,6 +32,24 @@ flynt-component[name='GridPostSelector'] {
     }
   }
 
+  figure {
+    position: relative;
+
+    &::before {
+      border-bottom: 40px solid transparent;
+      border-left: 40px solid transparent;
+      border-right: 40px solid var(--grey);
+      border-top: 40px solid transparent;
+      bottom: -40px;
+      content: '';
+      height: 0;
+      left: calc(100% - 79px);
+      position: absolute;
+      width: 0;
+      z-index: 1000;
+    }
+  }
+
   // .post-link {
   //   &:hover {
   //     .button--outline {
@@ -40,15 +58,15 @@ flynt-component[name='GridPostSelector'] {
   //   }
   // }
 
-  .figure {
-    clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 85%, 100% 0);
-  }
+  // .figure {
+  //   clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 85%, 100% 0);
+  // }
 
-  .content {
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%, 90% 0);
+  // .content {
+  //   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 20%, 90% 0);
 
-    @media (min-width: $breakpoint-tablet) {
-      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 27.5%, 90% 0);
-    }
-  }
+  //   @media (min-width: $breakpoint-tablet) {
+  //     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 27.5%, 90% 0);
+  //   }
+  // }
 }

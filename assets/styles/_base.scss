@@ -254,6 +254,7 @@ button {
   letter-spacing: 0;
   line-height: 1;
   padding: calc(var(--spacingSmall)/2) var(--spacingSmall);
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   width: fit-content;
@@ -276,6 +277,7 @@ button {
     background-size: cover;
     border-bottom: 1px solid var(--black);
     color: var(--black);
+    min-width: 150px;
     position: relative;
     text-decoration: none;
 
@@ -288,8 +290,6 @@ button {
 
   &--yellow {
     background-color: var(--yellow);
-    border: 1px solid transparent;
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10px, 105px 0);
     color: var(--black);
     text-decoration: none;
 
@@ -297,6 +297,18 @@ button {
     &:focus {
       background-color: var(--black);
       color: var(--yellow);
+    }
+
+    &::before {
+      border-bottom: 12px solid transparent;
+      border-right: 12px solid var(--grey);
+      content: '';
+      height: 0;
+      left: calc(100% - 10px);
+      position: absolute;
+      top: -2px;
+      width: 0;
+      z-index: 1000;
     }
   }
 
@@ -614,8 +626,8 @@ flynt-component {
 
 .mainContent {
   @apply mt-[65px];
-  @apply lg:mt-[120px];
-  @apply lg:min-h-[calc(100vh_-_120px)];
+  @apply lg:mt-[100px];
+  @apply lg:min-h-[calc(100vh_-_99px)];
 }
 
 .componentSpacing {
@@ -633,13 +645,9 @@ flynt-component {
 }
 
 .boxed {
-  margin-inline: auto;
-  max-width: var(--containerMaxWidth);
-  padding: var(--spacingSmall);
-
-  @media (min-width: $breakpoint-tablet) {
-    padding: var(--spacingLarge);
-  }
+  @apply p-sm;
+  @apply sm:p-md;
+  @apply md:p-lg;
 }
 
 .contentMaxWidth {

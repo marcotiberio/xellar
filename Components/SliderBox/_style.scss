@@ -6,6 +6,10 @@ flynt-component[name='SliderBox'] {
     .swiper-wrapper {
       box-sizing: inherit;
     }
+
+    .swiper-slide {
+      display: flex;
+    }
     
     &-button {
       align-items: center;
