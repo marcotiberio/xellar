@@ -142,6 +142,16 @@ function getConfig()
                 'icon' => '',
                 'items' => [
                     [
+                        'title' => 'Body Small',
+                        'classes' => 'font-bodySmall',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Body Large',
+                        'classes' => 'font-bodyLarge',
+                        'selector' => '*'
+                    ],
+                    [
                         'title' => 'Menu',
                         'classes' => 'font-bodyMenu',
                         'selector' => '*'

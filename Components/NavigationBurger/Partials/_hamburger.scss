@@ -29,9 +29,9 @@
     &--primary,
     &--text {
       background-color: var(--black);
-      border-radius: 6px;
+      border-radius: 0;
       display: block;
-      height: 3px;
+      height: 2px;
       inset-inline-start: 0;
       position: absolute;
       transition: opacity 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out 0.2s;
@@ -40,7 +40,7 @@
     }
 
     &::before {
-      inset-block-start: 0;
+      inset-block-start: 2px;
     }
 
     &--primary,
@@ -50,7 +50,7 @@
     }
 
     &::after {
-      inset-block-start: 18px;
+      inset-block-start: 16px;
     }
   }
 }

@@ -3,6 +3,11 @@ flynt-component[name='SliderImages'] {
     overflow: hidden;
     position: relative;
 
+    &-item {
+      height: auto;
+      min-height: calc(100vh - 180px);
+    }
+
     &-button {
       align-items: center;
       color: var(--yellow);
@@ -43,7 +48,7 @@ flynt-component[name='SliderImages'] {
     height: fit-content;
     justify-content: space-between;
     position: absolute;
-    z-index: 50;
+    z-index: 1;
     @apply left-0;
     @apply md:left-lg;
     @apply top-[180px];

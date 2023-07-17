@@ -9,7 +9,7 @@
     <div data-ref="slider" class="slider swiper-container w-full h-full">
       <div class="swiper-wrapper w-full h-full">
         {% for sliderItem in sliderItems %}
-          <div class="mx-auto slider-item swiper-slide w-full h-full flex flex-col">
+          <div class="mx-auto slider-item swiper-slide w-full h-[calc(100vh_-_66px)] flex flex-col bg-grey">
             <figure class="figure w-auto h-[165px] sm:h-[350px] md:h-[500px] mx-auto relative">
               <img class="lazyload w-full h-full object-contain relative"
                 src="{{ sliderItem.image.src | resize(32) }}"
@@ -17,7 +17,7 @@
                 data-sizes="auto"
                 alt="{{ sliderItem.image.alt|e }}">
             </figure>
-            <div class="w-full max-w-[1000px] h-full mx-auto pt-xl pb-md flex flex-col gap-sm sm:gap-md items-start">
+            <div class="w-full max-w-[1100px] h-full mx-auto pt-xl pb-md flex flex-col gap-sm sm:gap-md items-start">
               <div class="w-full flex flex-row justify-start items-center">
                 {% if sliderItem.title %}
                   <div class="text-yellow flex justify-start">{{ sliderItem.subtitle }}</div>

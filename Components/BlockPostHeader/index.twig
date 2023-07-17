@@ -2,7 +2,7 @@
   {# <script type="application/json">{{ jsonData|json_encode }}</script> #}
     {% if post.thumbnail %}
       <div class="featuredImage w-full h-full mb-sm md:mb-md">
-        <img class="lazyload object-cover aspect-video"
+        <img class="lazyload object-cover"
           src="{{ post.thumbnail.src }}"
           data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
           data-sizes="auto">

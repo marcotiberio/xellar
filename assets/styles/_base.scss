@@ -34,6 +34,7 @@ html {
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.2;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   scroll-behavior: smooth;
 
@@ -54,61 +55,71 @@ body {
 h1,
 .h1,
 .font-h1 {
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 4rem;
+  font-family: 'Replica', Arial, sans-serif;
+  font-size: 3.3rem;
   line-height: 1;
   // margin-bottom: 1rem;
   word-break: break-word;
 
-  @media (min-width: $breakpoint-mobile) {
-    font-size: 6.875rem;
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 6rem;
   }
 }
 
 h2,
 .h2,
 .font-h2 {
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 3rem;
+  font-family: 'Replica', Arial, sans-serif;
+  font-size: 2.8rem;
   line-height: 1;
   // margin-bottom: 1rem;
   word-break: break-word;
 
-  @media (min-width: $breakpoint-mobile) {
-    font-size: 5rem;
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 4.25rem;
   }
 }
 
 h3,
 .h3,
 .font-h3 {
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', Arial, sans-serif;
   font-size: 2.3rem;
   line-height: 1;
   // margin-bottom: 1rem;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-desktop) {
     font-size: 2.813rem;
   }
 }
 
 .font-smallTitle {
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', Arial, sans-serif;
   font-size: 1.5rem;
   line-height: 1;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-desktop) {
     font-size: 1.875rem;
   }
 }
 
-.font-bodyPlus {
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 1.125rem;
-  line-height: 1;
+.font-bodySmall {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.2;
 
-  @media (min-width: $breakpoint-mobile) {
-    font-size: 1.125rem;
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 0.875rem;
+  }
+}
+
+.font-bodyLarge {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.25rem;
   }
 }
 
@@ -117,30 +128,32 @@ p,
 .body {
   font-size: 1rem;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-desktop) {
     font-size: 1rem;
   }
 
   a {
     color: inherit;
+    @apply hover:underline;
+    @apply hover:underline-offset-[5px];
   }
 }
 
 .bodySmall {
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', Arial, sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-desktop) {
     font-size: 1rem;
   }
 }
 
 .font-bodyMenu {
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
-  font-size: 1rem;
+  font-family: 'Replica', Arial, sans-serif;
+  font-size: 0.875rem;
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: $breakpoint-desktop) {
     font-size: 1.125rem;
   }
 }
@@ -184,14 +197,101 @@ blockquote,
   }
 }
 
+@media print {
+  h1,
+  .h1,
+  h2,
+  .h2 {
+    font-size: 18pt;
+  }
+
+  h3,
+  .h3 {
+    font-size: 14pt;
+  }
+
+  p {
+    font-size: 10pt;
+  }
+}
+
 /**
 * Lists & Tables
 */
 
-// ul,
-// ol {
-//   padding-inline-start: 1.5rem;
-// }
+.wysiwyg {
+  ul {
+    list-style-type: none;
+    margin: 0 0 1.2rem;
+    padding-left: 1rem;
+  
+    ul {
+      list-style-type: none;
+      margin-bottom: 0;
+  
+      li {
+        margin-left: 1rem;
+        text-indent: -1rem;
+
+        &::before { 
+          content: '– ';
+        }
+      }
+    }
+  
+    li {
+      margin-left: 1rem;
+      text-indent: -1rem;
+
+      &::before { 
+        content: '– ';
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: var(--color-text);
+  font-size: var(--body-font-size-small);
+  max-width: 100%;
+  width: 100%;
+
+  caption {
+    caption-side: bottom;
+    color: var(--color-text-muted);
+    margin-block-start: calc(var(--flow-space) / 2);
+    text-align: start;
+  }
+
+  td,
+  th {
+    padding: 0.9rem 1rem;
+    text-align: inherit;
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  td {
+    min-width: 25ch;
+  }
+
+  thead {
+    background-color: var(--color-background-secondary);
+    border-block-end: solid 2px var(--color-border);
+  }
+
+  tr {
+    &:nth-child(even) {
+      background-color: var(--color-background-secondary);
+    }
+  }
+}
 
 table {
   border-collapse: collapse;
@@ -248,7 +348,7 @@ button {
   cursor: pointer;
   display: flex;
   font: inherit;
-  font-family: 'Replica', 'Trebuchet MS', sans-serif;
+  font-family: 'Replica', Arial, sans-serif;
   font-size: 1.125rem;
   justify-content: center;
   letter-spacing: 0;
@@ -462,27 +562,39 @@ button {
 
 .wpcf7-submit {
   @include reset-link;
+  align-items: center;
   appearance: none;
-  background-color: var(--blue);
-  border: 1px solid var(--blue);
-  color: var(--white);
+  background-color: transparent;
+  background-image: url('data:image/svg+xml,%3Csvg width="186" height="48" viewBox="0 0 186 48" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.5 0.5H177.453L185.5 9.19584V47.5H0.5V0.5Z" stroke="black"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid var(--black);
+  border-radius: 0;
+  color: var(--black);
   cursor: pointer;
+  display: flex;
   display: inline-block;
   font: inherit;
-  font-weight: 700;
+  font-family: 'Replica', Arial, sans-serif;
+  font-size: 1.125rem;
+  justify-content: center;
   letter-spacing: 0;
-  padding: var(--spacingSmall);
+  line-height: 1;
+  min-width: 150px;
+  padding: calc(var(--spacingSmall)/2);
+  position: relative;
   text-align: center;
-  text-decoration: none;
+  text-transform: uppercase;
+  width: fit-content;
 
   &:hover,
   &:focus {
-    background-color: transparent;
-    color: var(--black);
+    background-image: url('data:image/svg+xml,%3Csvg width="186" height="48" viewBox="0 0 186 48" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.5 0.5H177.453L185.5 9.19584V47.5H0.5V0.5Z" fill="black" stroke="black"/%3E%3C/svg%3E');
+    color: var(--yellow);
   }
 
-  @media (min-width: $breakpoint-tablet) {
-    padding: var(--spacingSmall) var(--spacingLarge);
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.125rem;
   }
 }
 
@@ -568,9 +680,9 @@ label {
 
 textarea {
   border: 1px solid var(--black);
+  height: 150px;
   margin: 0;
   max-width: 100%;
-  min-height: 150px;
   resize: vertical;
   vertical-align: top;
   width: 100%;
@@ -592,6 +704,10 @@ textarea {
     font: inherit;
     width: calc(100% - 33px);
   }
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 0 !important;
 }
 
 /**
@@ -626,8 +742,8 @@ flynt-component {
 
 .mainContent {
   @apply mt-[65px];
-  @apply lg:mt-[100px];
-  @apply lg:min-h-[calc(100vh_-_99px)];
+  @apply lg:mt-[110px];
+  @apply lg:min-h-[calc(100vh_-_110px)];
 }
 
 .componentSpacing {

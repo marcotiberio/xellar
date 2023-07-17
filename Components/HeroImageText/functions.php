@@ -23,8 +23,8 @@ function getACFLayout()
         'label' => __('Hero: Image/Video/text', 'flynt'),
         'sub_fields' => [
             [
-                'label' => __('General', 'flynt'),
-                'name' => 'generalTab',
+                'label' => __('Image/Video', 'flynt'),
+                'name' => 'imagevideoTab',
                 'type' => 'tab',
                 'placement' => 'top',
                 'endpoint' => 0,
@@ -65,6 +65,13 @@ function getACFLayout()
             //     ]
             // ],
             [
+                'label' => __('Text', 'flynt'),
+                'name' => 'textTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
                 'label' => __('Title', 'flynt'),
                 'name' => 'title',
                 'type' => 'text',
@@ -84,10 +91,54 @@ function getACFLayout()
                 ],
             ],
             [
+                'label' => __('Buttons', 'flynt'),
+                'name' => 'buttonsTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
                 'label' => __('Button', 'flynt'),
+                'instructions' => __('Use this button to link to another page or leave empty to use a contact form', 'flynt'),
                 'name' => 'buttonLink',
                 'type' => 'link',
                 'required' => 0,
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
+            [
+                'label' => __('Contact Form', 'flynt'),
+                'name' => 'formTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
+                'label' => __('Open Button - Form', 'flynt'),
+                'name' => 'openButtonText',
+                'type' => 'text',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
+            [
+                'label' => __('Close Button - Form ', 'flynt'),
+                'name' => 'closeButtonText',
+                'type' => 'text',
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ],
+            [
+                'label' => __('Contact Form', 'flynt'),
+                'name' => 'contactForm',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'toolbar' => 'default',
+                'media_upload' => 0,
+                'delay' => 1,
                 'wrapper' => [
                     'width' => 100
                 ],

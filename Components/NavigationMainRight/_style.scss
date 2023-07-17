@@ -6,22 +6,29 @@ flynt-component[name='NavigationMainRight'] {
   }
 
   .item {
-    font-family: 'Replica', 'Trebuchet MS', sans-serif;
+    font-family: 'Replica', Arial, sans-serif;
   }
   
   .submenu {
     align-items: flex-start;
     background: var(--white);
-    border-bottom: 1px solid var(--black);
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     height: auto;
     justify-content: space-between;
-    margin-top: var(--spacingSmall);
-    padding: var(--spacingSmall) 0;
+    // left: 20px;
+    padding: var(--spacingSmall);
     position: absolute;
     text-align: center;
-    width: calc(100% - var(--spacingLarge)*2);
+    top: 45px;
+    width: fit-content;
+
+    // .current-menu-item {
+    //   a {
+    //     @apply underline;
+    //     @apply underline-offset-[2px];
+    //   }
+    // }
   }
 
   .button {

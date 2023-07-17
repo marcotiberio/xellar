@@ -22,16 +22,22 @@
       {# Right #}
       <div class="flex flex-col gap-sm sm:gap-lg justify-between text-white">
         {% if socialFooterHtml %}
-        <div class="socialmedia">
+        <div class="hidden md:block socialmedia wysiwyg">
           {{ socialFooterHtml|e('wp_kses_post') }}
         </div>
         {% endif %}
         {% if menu %}
-          <nav class="navigation w-full" aria-label="{{ labels.ariaLabel }}">
+          <nav class="navigation w-full flex justify-start md:justify-end items-end md:items-center" aria-label="{{ labels.ariaLabel }}">
             {% include 'Partials/_menu.twig' with { 'items': menu.get_items, 'level': '0', 'maxLevel': maxLevel } only %}
+            {% if socialFooterHtml %}
+              <div class="block md:hidden socialmedia wysiwyg">
+                {{ socialFooterHtml|e('wp_kses_post') }}
+              </div>
+            {% endif %}
           </nav>
         {% endif %}
       </div>
+      {% include 'Partials/_backtotop.twig' %}
     </div>
   </div>
 </flynt-component>

@@ -7,7 +7,7 @@
   height: auto;
   inset-block-start: var(--navigation-height);
   inset-inline-start: 0;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 0;
   min-height: calc(100% - var(--navigation-height));
   overflow-y: scroll;
@@ -29,7 +29,7 @@
     align-items: center;
     border-top: 1px solid var(--grey);
     display: flex;
-    flex-grow: 1;
+    flex-grow: 0;
     justify-content: center;
   }
 
@@ -37,7 +37,7 @@
     @include reset-link;
     color: var(--black);
     display: block;
-    padding: var(--spacingSmall);
+    padding: 5px;
     text-align: center;
     text-decoration: none;
   }
@@ -69,7 +69,8 @@
 
 .submenu {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
+  justify-content: center;
   padding: 0;
   width: 100%;
 
@@ -77,9 +78,8 @@
     border-top: 0;
 
     .link {
-      font-size: 0.85rem;
-      font-weight: 400;
-      padding: 5px 10px;
+      padding-bottom: 10px;
+      padding-top: 0;
     }
   }
 }

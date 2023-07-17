@@ -25,13 +25,13 @@
       <div class="swiper-wrapper">
         {% for box in boxes %}
           <div 
-            class="slider-item swiper-slide relative w-full h-auto min-h-[300px] md:min-h-[360px] p-sm lg:mr-md flex flex-col justify-between bg-white overflow-hidden" 
+            class="slider-item swiper-slide relative w-full h-auto min-h-[300px] md:min-h-[360px] p-sm lg:mr-md flex flex-col justify-start bg-white overflow-hidden" 
             {# style="background-color: {% if box.colorBackground %}{{ box.colorBackground }}{% else %}var(--secondary){% endif %}; color:{% if box.colorText %}{{ box.colorText }}{% else %}var(--white){% endif %};" #}
             >
             <div>
               {% if box.logo %}
                 <div class="flex flex-row items-start justify-start mb-lg">
-                  <img class="logo lazyload w-auto h-auto object-contain"
+                  <img class="logo lazyload w-auto max-w-[60px] h-auto object-contain"
                   src="{{ box.logo.src | resize(32) }}"
                   data-srcset="{{function('wp_get_attachment_image_srcset', box.logo.id)}}"
                   data-sizes="auto">

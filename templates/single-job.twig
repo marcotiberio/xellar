@@ -1,0 +1,17 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  <article class="post">
+    <header class="post-header w-full max-w-screen-xl mx-auto flex flex-col gap-sm md:gap-md">
+      {{ renderComponent('BlockJobHeader', { post: post }) }}
+    </header>
+    <section class="post-main">
+      {% for component in post.meta('jobComponents') %}
+        {{ renderComponent(component) }}
+      {% endfor %}
+    </section>
+    <section class="post-related">
+      {# {{ renderComponent('RelatedPosts', {'preContentTitle': '<h2>' ~ __('Related News') ~ '</h2>', 'taxonomies': post.categories(), 'options': {'maxPosts': 3}}) }} #}
+    </section>
+  </article>
+{% endblock %}

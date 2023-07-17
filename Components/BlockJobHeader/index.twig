@@ -1,0 +1,13 @@
+<flynt-component load:on="visible" name="BlockJobHeader" class="flex flex-col gap-md lg:gap-xl">
+  {% if post.thumbnail %}
+    <div class="featuredImage w-full h-full">
+      <img class="lazyload object-cover h-[70vh]"
+        src="{{ post.thumbnail.src }}"
+        data-srcset="{{function('wp_get_attachment_image_srcset', post.thumbnail.id)}}"
+        data-sizes="auto">
+    </div>
+  {% endif %}
+  <div class="h-auto lg:h-auto w-full px-md md:px-xl lg:px-xxl grow flex flex-col justify-start gap-sm">
+    <div class="h2">{{ post.title }}</div>
+  </div>
+</flynt-component>

@@ -9,6 +9,10 @@ flynt-component[name='SliderBox'] {
 
     .swiper-slide {
       display: flex;
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 80%;
+      }
     }
     
     &-button {

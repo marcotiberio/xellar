@@ -1,7 +1,8 @@
 flynt-component[name='GridImageText'] {
   [data-grid-columns='1'] {
     @apply grid-cols-1;
-    @apply md:grid-cols-1;
+    @apply sm:grid-cols-1;
+    @apply lg:grid-cols-1;
 
     figure {
       img {
@@ -12,7 +13,8 @@ flynt-component[name='GridImageText'] {
 
   [data-grid-columns='2'] {
     @apply grid-cols-1;
-    @apply md:grid-cols-2;
+    @apply sm:grid-cols-2;
+    @apply lg:grid-cols-2;
 
     figure {
       img {
@@ -23,7 +25,8 @@ flynt-component[name='GridImageText'] {
 
   [data-grid-columns='3'] {
     @apply grid-cols-1;
-    @apply md:grid-cols-3;
+    @apply sm:grid-cols-2;
+    @apply lg:grid-cols-3;
 
     figure {
       img {

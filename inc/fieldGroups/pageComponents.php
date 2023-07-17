@@ -27,6 +27,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\HeroSlider\getACFLayout(),
                     Components\HeroSliderComposite\getACFLayout(),
                     Components\ListTextLink\getACFLayout(),
+                    Components\ListingJobs\getACFLayout(),
                     Components\SliderBox\getACFLayout(),
                     Components\SliderImages\getACFLayout(),
                 ],
@@ -38,6 +39,11 @@ add_action('Flynt/afterRegisterComponents', function () {
                     'param' => 'post_type',
                     'operator' => '!=',
                     'value' => 'post'
+                ],
+                [
+                    'param' => 'post_type',
+                    'operator' => '!=',
+                    'value' => 'job'
                 ],
                 [
                     'param' => 'post_type',

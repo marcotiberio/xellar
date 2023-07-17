@@ -25,14 +25,14 @@
       <div class="swiper-wrapper w-full h-full">
         {% for sliderItem in sliderItems %}
           <div class="slider-item swiper-slide w-full h-full flex flex-col">
-            <div class="w-full h-full pt-lg pb-md flex flex-row justify-between items-end">
+            <div class="w-full h-full pt-lg pb-md flex flex-col md:flex-row gap-sm md:gap-0 justify-between md:justify-start items-start md:items-end">
               {% if sliderItem.titleHtml %}
-                <div class="w-3/4">
+                <div class="w-full md:w-3/4">
                   {{ sliderItem.titleHtml }}
                 </div>
               {% endif %}
               {% if sliderItem.buttonLink %}
-                <div class="w-1/4 flex justify-end">
+                <div class="w-full md:w-1/4 flex justify-start md:justify-end">
                   <a class="button button--yellow mb-[1rem]" href="{{ sliderItem.buttonLink.url }}"{% if sliderItem.buttonLink.target %} target="{{ sliderItem.buttonLink.target }}" rel="noreferrer noopener"{% endif %}>
                     {{ sliderItem.buttonLink.title|e }}
                   </a>

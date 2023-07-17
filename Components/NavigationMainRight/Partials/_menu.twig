@@ -10,16 +10,24 @@
     {% endif %}
     {# menu with submenu item #}
     {% if item.children %}
-      <li class="item flex align-middle items-center open-submenu font-bodyMenu {{- item.current ? ' current-menu-item underline underline-offset-[20px]' }}" >
-        <a class="link font-bodyMenu text-darkgrey flex align-middle items-center no-underline hover:underline-offset-[20px] hover:underline text-currentColor transition-transform duration-200 ease-in-out" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>
-          {{ item.title }}
-        </a>
-        <ul class="menu submenu">
-          {% for subitem in item.children %}
-            <li class="item {{- item.current ? ' current-menu-item underline ' }}">
-              <a class="link flex text-darkgrey align-middle items-center no-underline hover:underline hover:underline-offset-[20px] text-currentColor transition-transform duration-200 ease-in-out" href="{{ subitem.link }}">{{ subitem.title }}</a>
-            </li>
-          {% endfor %}
+      <li x-data="{ showDropdown: false }" class="item flex align-middle items-center open-submenu font-bodyMenu {{- item.current ? ' current-menu-item underline underline-offset-[20px]' }}" >
+        <div 
+          @mouseover="showDropdown = true"
+          @mouseleave="showDropdown = false"
+          @click="showDropdown = !showDropdown" 
+          class="link font-bodyMenu text-darkgrey flex align-middle items-center no-underline hover:underline hover:underline-offset-[20px] text-currentColor transition-transform duration-200 ease-in-out cursor-pointer">
+            {{ item.title }}
+        </div>
+        <ul 
+          class="menu submenu" x-cloak
+          x-show="showDropdown"
+          @mouseover="showDropdown = true"
+          @mouseleave="showDropdown = false">
+            {% for subitem in item.children %}
+              <li class="item {{- subitem.current ? ' current-menu-item underline underline-offset-[2px]' }}">
+                <a class="link flex text-darkgrey align-middle items-center no-underline hover:underline hover:underline-offset-[2px] text-currentColor transition-transform duration-200 ease-in-out" href="{{ subitem.link }}">{{ subitem.title }}</a>
+              </li>
+            {% endfor %}
         </ul>
       </li>
     {% endif %}

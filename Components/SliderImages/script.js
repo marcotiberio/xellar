@@ -1,4 +1,4 @@
-import Swiper, { Navigation, A11y, Autoplay, Pagination } from 'swiper'
+import Swiper, { Navigation, A11y, Autoplay, Pagination, EffectFade } from 'swiper'
 import 'swiper/css/bundle'
 import { buildRefs, getJSON } from '@/assets/scripts/helpers.js'
 
@@ -12,10 +12,11 @@ export default function (el) {
 function initSlider (refs, data) {
   const { options } = data
   const config = {
-    modules: [Navigation, A11y, Autoplay, Pagination],
+    modules: [Navigation, A11y, Autoplay, Pagination, EffectFade],
     a11y: options.a11y,
     slidesPerView: 1,
     spaceBetween: 0,
+    effect: 'fade',
     pagination: {
       el: refs.pagination,
       type: 'bullets',
