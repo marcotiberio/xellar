@@ -16,6 +16,7 @@
 
     .wgcurrent {
       border: 0 !important;
+      display: none !important;
 
       &::after {
         display: none !important;
@@ -25,6 +26,14 @@
     ul {
       background: var(--yellow);
       border: 0 !important;
+      display: block !important;
+      left: -10px !important;
+    }
+
+    &.weglot-invert {
+      ul {
+        bottom: 20px !important;
+      }
     }
 
     span {

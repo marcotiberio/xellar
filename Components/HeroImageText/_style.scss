@@ -43,6 +43,10 @@ flynt-component[name='HeroImageText'] {
     }
   }
 
+  .contactFormWrapper {
+    display: none;
+  }
+
   @import 'Partials/figure';
   @import 'Partials/videoPlayButton';
   @import 'Partials/videoLoader';

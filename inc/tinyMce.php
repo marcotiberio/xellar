@@ -92,7 +92,8 @@ function getConfig()
             'Paragraph' => 'p',
             'Heading 1' => 'h1',
             'Heading 2' => 'h2',
-            'Heading 3' => 'h3'
+            'Heading 3' => 'h3',
+            'Heading 4' => 'h4',
         ],
         'styleformats' => [
             [
@@ -112,6 +113,11 @@ function getConfig()
                     [
                         'title' => 'Heading 3',
                         'classes' => 'h3',
+                        'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Heading 4',
+                        'classes' => 'h4',
                         'selector' => '*'
                     ],
                 ]

@@ -9,7 +9,7 @@ add_filter('Flynt/addComponentData?name=HeroImageText', function ($data) {
     $data['oembed'] = Oembed::setSrcAsDataAttribute(
         $data['oembed'],
         [
-            'autoplay' => 'true'
+            'autoplay' => 'false'
         ]
     );
 

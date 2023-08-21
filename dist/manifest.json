@@ -45,7 +45,7 @@
     "src": "Components/GridPostsArchive/script.js"
   },
   "Components/HeroImageText/script.js": {
-    "file": "assets/script-9c1467d8.js",
+    "file": "assets/script-fdef6c29.js",
     "imports": [
       "_helpers-0bb72b7a.js"
     ],
@@ -99,7 +99,7 @@
     "src": "Components/NavigationMainLogo/Assets/logo.svg"
   },
   "Components/ScrolltriggerComparison/script.js": {
-    "file": "assets/script-4f9d8286.js",
+    "file": "assets/script-04477047.js",
     "imports": [
       "assets/main.js"
     ],
@@ -193,6 +193,10 @@
     "file": "assets/ReplicaLLWeb-Regular-d5d54538.woff2",
     "src": "assets/fonts/ReplicaLLWeb-Regular.woff2"
   },
+  "assets/fonts/helveticaneue.woff2": {
+    "file": "assets/helveticaneue-562ba90f.woff2",
+    "src": "assets/fonts/helveticaneue.woff2"
+  },
   "assets/images/logo.svg": {
     "file": "assets/logo-26c0c58f.svg",
     "src": "assets/images/logo.svg"
@@ -219,12 +223,12 @@
       "Components/SliderImages/script.js",
       "Components/SliderLogos/script.js"
     ],
-    "file": "assets/main-9ea73c7a.js",
+    "file": "assets/main-65ec8498.js",
     "isEntry": true,
     "src": "assets/main.js"
   },
   "assets/main.scss": {
-    "file": "assets/main-d0023f15.css",
+    "file": "assets/main-ac146a5b.css",
     "isEntry": true,
     "src": "assets/main.scss"
   },
@@ -234,7 +238,7 @@
     "src": "assets/print.scss"
   },
   "assets/tinyMce.scss": {
-    "file": "assets/tinyMce-1d90c8d4.css",
+    "file": "assets/tinyMce-2b33ec03.css",
     "isEntry": true,
     "src": "assets/tinyMce.scss"
   },

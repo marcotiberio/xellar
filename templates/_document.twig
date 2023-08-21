@@ -4,16 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src='https://www.googletagmanager.com/gtag/js?id=G-R6JBFLPWN8'></script> 
-    <script> 
-      window.dataLayer = window.dataLayer || []; 
-      function gtag(){dataLayer.push(arguments);} 
-      gtag(‘js’, new Date()); 
-      gtag(‘config’, ‘G-R6JBFLPWN8’); 
-    </script>
-    
     {{ function('wp_head') }}
   </head>
   <body class="bg-grey">

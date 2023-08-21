@@ -29,7 +29,7 @@ class Oembed
                 // add additional get parameters to existing oembed url
                 $src = add_query_arg($additionalGetParams, $src);
                 $node->removeAttribute('src');
-                $node->setAttribute('data-src', $src);
+                $node->setAttribute('src', $src);
                 $output .= $Dom->saveHTML($node);
             }
         }
